@@ -1,0 +1,2739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="I.MES.Library.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="IMESLibraryStoreContainer">
+          <EntitySet Name="MFG_BarcodeBindDet" EntityType="I.MES.Library.Store.MFG_BarcodeBindDet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_BarcodeControlStatus" EntityType="I.MES.Library.Store.MFG_BarcodeControlStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_BarcodePrintLog" EntityType="I.MES.Library.Store.MFG_BarcodePrintLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_BarcodeScanLog" EntityType="I.MES.Library.Store.MFG_BarcodeScanLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_BOM" EntityType="I.MES.Library.Store.MFG_BOM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_BOM_Disassembled" EntityType="I.MES.Library.Store.MFG_BOM_Disassembled" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_Part" EntityType="I.MES.Library.Store.MFG_Part" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_PartCategory" EntityType="I.MES.Library.Store.MFG_PartCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_PartDetail" EntityType="I.MES.Library.Store.MFG_PartDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProcRoute" EntityType="I.MES.Library.Store.MFG_ProcRoute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProdLine" EntityType="I.MES.Library.Store.MFG_ProdLine" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProdStation" EntityType="I.MES.Library.Store.MFG_ProdStation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProduceCategory" EntityType="I.MES.Library.Store.MFG_ProduceCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProduceLevel" EntityType="I.MES.Library.Store.MFG_ProduceLevel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProductBarcode" EntityType="I.MES.Library.Store.MFG_ProductBarcode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProductColor" EntityType="I.MES.Library.Store.MFG_ProductColor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProdWorkSetp" EntityType="I.MES.Library.Store.MFG_ProdWorkSetp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ProdWorkStepParam" EntityType="I.MES.Library.Store.MFG_ProdWorkStepParam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_RoteConfig" EntityType="I.MES.Library.Store.MFG_RoteConfig" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_RouteStation" EntityType="I.MES.Library.Store.MFG_RouteStation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ScanPlugin" EntityType="I.MES.Library.Store.MFG_ScanPlugin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_ScanPluginParam" EntityType="I.MES.Library.Store.MFG_ScanPluginParam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_VehicleMode" EntityType="I.MES.Library.Store.MFG_VehicleMode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MFG_WorkSchedule" EntityType="I.MES.Library.Store.MFG_WorkSchedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PP_BarCodeTrack" EntityType="I.MES.Library.Store.PP_BarCodeTrack" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PP_ThightRecord" EntityType="I.MES.Library.Store.PP_ThightRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Company" EntityType="I.MES.Library.Store.SYS_Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Factory" EntityType="I.MES.Library.Store.SYS_Factory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_GlobalConfig" EntityType="I.MES.Library.Store.SYS_GlobalConfig" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_GlobalDic" EntityType="I.MES.Library.Store.SYS_GlobalDic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_MachinePrinterPriv" EntityType="I.MES.Library.Store.SYS_MachinePrinterPriv" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Printer" EntityType="I.MES.Library.Store.SYS_Printer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Prog" EntityType="I.MES.Library.Store.SYS_Prog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_ProgPriv" EntityType="I.MES.Library.Store.SYS_ProgPriv" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_Role" EntityType="I.MES.Library.Store.SYS_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_RoleProgPriv" EntityType="I.MES.Library.Store.SYS_RoleProgPriv" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_RPTMenu" EntityType="I.MES.Library.Store.SYS_RPTMenu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SerialNum" EntityType="I.MES.Library.Store.SYS_SerialNum" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_User" EntityType="I.MES.Library.Store.SYS_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_UserFactoryPriv" EntityType="I.MES.Library.Store.SYS_UserFactoryPriv" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_UserRole" EntityType="I.MES.Library.Store.SYS_UserRole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="I.MES.Library.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_MFG_SelectRoteConfig" EntityType="I.MES.Library.Store.V_MFG_SelectRoteConfig" store:Type="Views" store:Schema="dbo" store:Name="V_MFG_SelectRoteConfig">
+            <DefiningQuery>SELECT 
+      [V_MFG_SelectRoteConfig].[RouteID] AS [RouteID], 
+      [V_MFG_SelectRoteConfig].[RouteCode] AS [RouteCode], 
+      [V_MFG_SelectRoteConfig].[VicheModel] AS [VicheModel], 
+      [V_MFG_SelectRoteConfig].[PartNo] AS [PartNo], 
+      [V_MFG_SelectRoteConfig].[CreateUser] AS [CreateUser], 
+      [V_MFG_SelectRoteConfig].[CreateTime] AS [CreateTime], 
+      [V_MFG_SelectRoteConfig].[CreateMachine] AS [CreateMachine], 
+      [V_MFG_SelectRoteConfig].[ModifyUser] AS [ModifyUser], 
+      [V_MFG_SelectRoteConfig].[ModifyTime] AS [ModifyTime], 
+      [V_MFG_SelectRoteConfig].[ModifyMachine] AS [ModifyMachine], 
+      [V_MFG_SelectRoteConfig].[RoteCode] AS [RoteCode], 
+      [V_MFG_SelectRoteConfig].[RoteName] AS [RoteName], 
+      [V_MFG_SelectRoteConfig].[Description] AS [Description]
+      FROM [dbo].[V_MFG_SelectRoteConfig] AS [V_MFG_SelectRoteConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_SYS_TABLE_STRUCT" EntityType="I.MES.Library.Store.V_SYS_TABLE_STRUCT" store:Type="Views" store:Schema="dbo" store:Name="V_SYS_TABLE_STRUCT">
+            <DefiningQuery>SELECT 
+      [V_SYS_TABLE_STRUCT].[SchemaName] AS [SchemaName], 
+      [V_SYS_TABLE_STRUCT].[TableName] AS [TableName], 
+      [V_SYS_TABLE_STRUCT].[ColName] AS [ColName], 
+      [V_SYS_TABLE_STRUCT].[TypeName] AS [TypeName], 
+      [V_SYS_TABLE_STRUCT].[Max_Length] AS [Max_Length], 
+      [V_SYS_TABLE_STRUCT].[IsPrimary] AS [IsPrimary], 
+      [V_SYS_TABLE_STRUCT].[IsIdentity] AS [IsIdentity], 
+      [V_SYS_TABLE_STRUCT].[defaultVaule] AS [defaultVaule]
+      FROM [dbo].[V_SYS_TABLE_STRUCT] AS [V_SYS_TABLE_STRUCT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_WorkStepParam" EntityType="I.MES.Library.Store.V_WorkStepParam" store:Type="Views" store:Schema="dbo" store:Name="V_WorkStepParam">
+            <DefiningQuery>SELECT 
+      [V_WorkStepParam].[StepID] AS [StepID], 
+      [V_WorkStepParam].[Default image address] AS [Default image address], 
+      [V_WorkStepParam].[PartName] AS [PartName], 
+      [V_WorkStepParam].[Check key] AS [Check key], 
+      [V_WorkStepParam].[Screw the number] AS [Screw the number], 
+      [V_WorkStepParam].[Screw position] AS [Screw position], 
+      [V_WorkStepParam].[torque] AS [torque], 
+      [V_WorkStepParam].[torqueoffset] AS [torqueoffset], 
+      [V_WorkStepParam].[Screw picture Pset] AS [Screw picture Pset], 
+      [V_WorkStepParam].[Countdown time] AS [Countdown time], 
+      [V_WorkStepParam].[printparam] AS [printparam], 
+      [V_WorkStepParam].[picparam] AS [picparam], 
+      [V_WorkStepParam].[checkparam] AS [checkparam], 
+      [V_WorkStepParam].[inspectionparam] AS [inspectionparam], 
+      [V_WorkStepParam].[presenceparam] AS [presenceparam]
+      FROM [dbo].[V_WorkStepParam] AS [V_WorkStepParam]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_SYS_RoleProgPriv_SYS_ProgPriv" Association="I.MES.Library.Store.FK_SYS_RoleProgPriv_SYS_ProgPriv">
+            <End Role="SYS_ProgPriv" EntitySet="SYS_ProgPriv" />
+            <End Role="SYS_RoleProgPriv" EntitySet="SYS_RoleProgPriv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRoleProgPriv_TRole" Association="I.MES.Library.Store.FK_TRoleProgPriv_TRole">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_RoleProgPriv" EntitySet="SYS_RoleProgPriv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUserRole_TRole" Association="I.MES.Library.Store.FK_TUserRole_TRole">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_UserRole" EntitySet="SYS_UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUserRole_TUser" Association="I.MES.Library.Store.FK_TUserRole_TUser">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="SYS_UserRole" EntitySet="SYS_UserRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MFG_BarcodeBindDet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BindType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MainBarcode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Barcode" Type="varchar" MaxLength="200" />
+          <Property Name="BindCfgName" Type="varchar" MaxLength="50" />
+          <Property Name="BindStatus" Type="int" />
+          <Property Name="BindUser" Type="varchar" MaxLength="50" />
+          <Property Name="BindTime" Type="datetime" />
+          <Property Name="UnbindUser" Type="varchar" MaxLength="50" />
+          <Property Name="UnbindTime" Type="datetime" />
+          <Property Name="BindScanSite" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodeControlStatus">
+          <Key>
+            <PropertyRef Name="ControlStatus" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ControlStatus" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ControlStatusName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodePrintLog">
+          <Key>
+            <PropertyRef Name="Barcode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Barcode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Printer" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PrintMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrintTime" Type="datetime" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodeScanLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="varchar" MaxLength="20" />
+          <Property Name="ProdLineCode" Type="varchar" MaxLength="20" />
+          <Property Name="BarCode" Type="varchar" MaxLength="20" />
+          <Property Name="StationCode" Type="varchar" MaxLength="20" />
+          <Property Name="OrigPartNo" Type="varchar" MaxLength="20" />
+          <Property Name="OrigQualityStatus" Type="varchar" MaxLength="10" />
+          <Property Name="NewPartNo" Type="varchar" MaxLength="20" />
+          <Property Name="NewQualityStatus" Type="varchar" MaxLength="20" />
+          <Property Name="OpType" Type="varchar" MaxLength="10" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_BOM">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="ParentPartNo" />
+            <PropertyRef Name="BomVer" />
+            <PropertyRef Name="ItemNo" />
+            <PropertyRef Name="ComponentPartNo" />
+            <PropertyRef Name="EffStartTime" />
+            <PropertyRef Name="EffExpireTime" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParentPartNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BomVer" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemNo" Type="int" Nullable="false" />
+          <Property Name="ComponentPartNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Qty" Type="numeric" Nullable="false" Scale="8" />
+          <Property Name="EffStartTime" Type="datetime" Nullable="false" />
+          <Property Name="EffExpireTime" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="OperateProcess" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Scrp" Type="real" />
+          <Property Name="Ref1" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsDel" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_BOM_Disassembled">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PartNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParentPartNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ComponentPartNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="BomVer" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemNo" Type="int" Nullable="false" />
+          <Property Name="Qty" Type="numeric" Nullable="false" Precision="38" Scale="18" />
+          <Property Name="EffStartTime" Type="datetime" Nullable="false" />
+          <Property Name="EffExpireTime" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ComponentPMCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="DisassembleTime" Type="datetime" Nullable="false" />
+          <Property Name="Level" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_Part">
+          <Key>
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PartNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProjectName" Type="varchar" MaxLength="20" />
+          <Property Name="BriefDesc" Type="varchar" MaxLength="20" />
+          <Property Name="CompPartNo" Type="varchar" MaxLength="20" />
+          <Property Name="MeterialDescrition" Type="varchar" MaxLength="100" />
+          <Property Name="PartDescription" Type="varchar" MaxLength="100" />
+          <Property Name="VehicleMode" Type="varchar" MaxLength="20" />
+          <Property Name="ColorCode" Type="varchar" MaxLength="20" />
+          <Property Name="PartLevel" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_PartCategory">
+          <Key>
+            <PropertyRef Name="CategoryCode" />
+            <PropertyRef Name="CategoryType" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CategoryDescription" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CategoryType" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MFG_PartDetail">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PartNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PartType" Type="nvarchar" MaxLength="10" />
+          <Property Name="PartDesc" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="PartDescEn" Type="nvarchar" MaxLength="200" />
+          <Property Name="Unit" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="MaterialCtgy" Type="nvarchar" MaxLength="10" />
+          <Property Name="BaseMaterial" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductLevel" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShareProperty" Type="nvarchar" MaxLength="10" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="20" />
+          <Property Name="Critical" Type="nvarchar" MaxLength="10" />
+          <Property Name="Consumable" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProduceLine" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PMCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SpecialPMCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="ExtPurLoc" Type="nvarchar" MaxLength="10" />
+          <Property Name="NeedIQC" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Location" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ERPSys" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="IsD" Type="bit" Nullable="false" />
+          <Property Name="QtyPerPkg" Type="numeric" Nullable="false" Scale="8" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="SizeDimension" Type="nvarchar" MaxLength="32" />
+          <Property Name="ReorderPoint" Type="numeric" Precision="13" Scale="3" />
+          <Property Name="JointlyPartFlag" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="MFG_ProcRoute">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FactoryCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdLineCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoteCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoteName" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ProdLine">
+          <Key>
+            <PropertyRef Name="ProdLineCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="varchar" MaxLength="20" />
+          <Property Name="ProdLineCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdLineName" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ProdStation">
+          <Key>
+            <PropertyRef Name="FatoryCode" />
+            <PropertyRef Name="ProdLineCode" />
+            <PropertyRef Name="StationCode" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FatoryCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProdLineCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StationCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StationName" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ProduceCategory">
+          <Key>
+            <PropertyRef Name="ProduceCtgyCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProduceCtgyCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CategoryDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CategoryBriefCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="InitPartNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="InitPartVersion" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="InitControlStatus" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="InitQualityStatus" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="BarcodePrintLot" Type="int" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="VehicleMode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustAssemblyLine" Type="nvarchar" MaxLength="50" />
+          <Property Name="Upper" Type="int" />
+          <Property Name="CodeLEFT" Type="int" />
+          <Property Name="Barcodewidth" Type="int" />
+          <Property Name="Barcodeheight" Type="int" />
+          <Property Name="Fontleft" Type="int" />
+          <Property Name="Fontsize" Type="int" />
+          <Property Name="Fontname" Type="nvarchar" MaxLength="50" />
+          <Property Name="ISQRCode" Type="int" />
+        </EntityType>
+        <EntityType Name="MFG_ProduceLevel">
+          <Key>
+            <PropertyRef Name="ProduceLevelCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProduceLevelCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProduceLevelName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MFG_ProductBarcode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Barcode" Type="varchar" MaxLength="20" />
+          <Property Name="OrderNo" Type="varchar" MaxLength="20" />
+          <Property Name="CurrentPartNo" Type="varchar" MaxLength="20" />
+          <Property Name="QualityStatus" Type="varchar" MaxLength="10" />
+          <Property Name="ControlStatus" Type="varchar" MaxLength="10" />
+          <Property Name="PrintTime" Type="datetime" />
+          <Property Name="BarcodeStatus" Type="int" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ProductColor">
+          <Key>
+            <PropertyRef Name="ColorCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ColorCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ColorName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ColorEName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsDel" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProdWorkSetp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RouteSationID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PluginID" Type="nvarchar" MaxLength="20" />
+          <Property Name="StepDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="RowNum" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ProdWorkStepParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StepID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamValue" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_RoteConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RouteID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="VicheModel" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PartNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_RouteStation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FactoryCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoteID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StationCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="StationName" Type="varchar" MaxLength="50" />
+          <Property Name="RowNum" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ScanPlugin">
+          <Key>
+            <PropertyRef Name="PluginID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PluginID" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="PluginName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="PluginType" Type="varchar" MaxLength="20" />
+          <Property Name="PluginDesc" Type="varchar" MaxLength="50" />
+          <Property Name="IsSelf" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_ScanPluginParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PluginID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamDesc" Type="varchar" MaxLength="50" />
+          <Property Name="IsNecessary" Type="int" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_VehicleMode">
+          <Key>
+            <PropertyRef Name="VehicleMode" />
+          </Key>
+          <Property Name="ID" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleMode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VehicleName" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MFG_WorkSchedule">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="ProdDate" />
+            <PropertyRef Name="PartNo" />
+            <PropertyRef Name="WorkVer" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ProdDate" Type="datetime" Nullable="false" />
+          <Property Name="PartNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Qty" Type="numeric" Scale="8" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="WorkVer" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PP_BarCodeTrack">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNum" Type="varchar" MaxLength="20" />
+          <Property Name="PartNo" Type="varchar" MaxLength="20" />
+          <Property Name="StationCode" Type="varchar" MaxLength="20" />
+          <Property Name="ItemName" Type="varchar" MaxLength="50" />
+          <Property Name="ItemType" Type="varchar" MaxLength="10" />
+          <Property Name="ItemValue" Type="varchar" MaxLength="100" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PP_ThightRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SerialNum" Type="nvarchar" MaxLength="20" />
+          <Property Name="PartNo" Type="varchar" MaxLength="20" />
+          <Property Name="ItemName" Type="varchar" MaxLength="20" />
+          <Property Name="StationCode" Type="varchar" MaxLength="20" />
+          <Property Name="ScrewNo" Type="int" />
+          <Property Name="Trque" Type="varchar" MaxLength="20" />
+          <Property Name="Angel" Type="varchar" MaxLength="20" />
+          <Property Name="X" Type="varchar" MaxLength="10" />
+          <Property Name="Y" Type="varchar" MaxLength="10" />
+          <Property Name="Result" Type="varchar" MaxLength="4" />
+          <Property Name="ThightTime" Type="datetime" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_Company">
+          <Key>
+            <PropertyRef Name="CompanyCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompanyName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompanyFullName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CompanyHUCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="SAPCompanyCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="QADCompanyCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_Factory">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FactoryName" Type="varchar" MaxLength="20" />
+          <Property Name="CompanyCode" Type="varchar" MaxLength="20" />
+          <Property Name="SupplierCode" Type="varchar" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_GlobalConfig">
+          <Key>
+            <PropertyRef Name="ConfigName" />
+            <PropertyRef Name="ParamCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConfigName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParamCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ParamValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParamDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="CanEdit" Type="bit" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FactoryCode" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_GlobalDic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CodeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CodeValue" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="Desc" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_MachinePrinterPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrinterCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_Printer">
+          <Key>
+            <PropertyRef Name="PrinterCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PrinterCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PrinterServer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrinterName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrinterDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrinterLocation" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_Prog">
+          <Key>
+            <PropertyRef Name="ProgCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProgCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProgName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProgType" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProgForm" Type="nvarchar" MaxLength="50" />
+          <Property Name="AppType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_ProgPriv">
+          <Key>
+            <PropertyRef Name="PrivCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PrivCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ProgCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PrivName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrivDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PrivID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleDesc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CrtUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CrtTime" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CrtMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LatestModifyUser" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="RoleID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_RoleProgPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="PrivCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_RPTMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MenuID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ProgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Url" Type="nvarchar" MaxLength="200" />
+          <Property Name="Target" Type="nvarchar" MaxLength="100" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ParentID" Type="nvarchar" MaxLength="10" />
+          <Property Name="OrderNum" Type="int" />
+          <Property Name="IconUrl" Type="nvarchar" MaxLength="10" />
+          <Property Name="IconRow" Type="int" />
+          <Property Name="IconCol" Type="int" />
+          <Property Name="PrivID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_SerialNum">
+          <Key>
+            <PropertyRef Name="Prefix" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Prefix" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CurrentNum" Type="int" Nullable="false" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_User">
+          <Key>
+            <PropertyRef Name="UserAccount" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserWorkID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="LatestLoginTime" Type="datetime" />
+          <Property Name="LatestLoginMachine" Type="nvarchar" MaxLength="50" />
+          <Property Name="LatestModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="LatestModifyTime" Type="datetime" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="DomainAccount" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_UserFactoryPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FactoryCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="EffitiveTime" Type="datetime" Nullable="false" />
+          <Property Name="ExpireTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyUserAccount" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LatestModifyTime" Type="datetime" Nullable="false" />
+          <Property Name="LatestModifyMachine" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“MES.dbo.V_MFG_SelectRoteConfig”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="V_MFG_SelectRoteConfig">
+          <Key>
+            <PropertyRef Name="RouteID" />
+            <PropertyRef Name="RouteCode" />
+            <PropertyRef Name="VicheModel" />
+            <PropertyRef Name="PartNo" />
+            <PropertyRef Name="CreateTime" />
+            <PropertyRef Name="RoteCode" />
+          </Key>
+          <Property Name="RouteID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RouteCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VicheModel" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PartNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateMachine" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="ModifyMachine" Type="varchar" MaxLength="20" />
+          <Property Name="RoteCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoteName" Type="varchar" MaxLength="20" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“MES.dbo.V_SYS_TABLE_STRUCT”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="V_SYS_TABLE_STRUCT">
+          <Key>
+            <PropertyRef Name="TableName" />
+            <PropertyRef Name="ColName" />
+            <PropertyRef Name="TypeName" />
+            <PropertyRef Name="Max_Length" />
+            <PropertyRef Name="IsPrimary" />
+            <PropertyRef Name="IsIdentity" />
+          </Key>
+          <Property Name="SchemaName" Type="nvarchar" MaxLength="128" />
+          <Property Name="TableName" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="ColName" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="TypeName" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="Max_Length" Type="smallint" Nullable="false" />
+          <Property Name="IsPrimary" Type="bit" Nullable="false" />
+          <Property Name="IsIdentity" Type="int" Nullable="false" />
+          <Property Name="defaultVaule" Type="nvarchar(max)" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“MES.dbo.V_WorkStepParam”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="V_WorkStepParam">
+          <Key>
+            <PropertyRef Name="StepID" />
+          </Key>
+          <Property Name="StepID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Default image address" Type="nvarchar" MaxLength="50" />
+          <Property Name="PartName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Check key" Type="nvarchar" MaxLength="50" />
+          <Property Name="Screw the number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Screw position" Type="nvarchar" MaxLength="50" />
+          <Property Name="torque" Type="nvarchar" MaxLength="50" />
+          <Property Name="torqueoffset" Type="nvarchar" MaxLength="50" />
+          <Property Name="Screw picture Pset" Type="nvarchar" MaxLength="50" />
+          <Property Name="Countdown time" Type="nvarchar" MaxLength="50" />
+          <Property Name="printparam" Type="nvarchar" MaxLength="50" />
+          <Property Name="picparam" Type="nvarchar" MaxLength="50" />
+          <Property Name="checkparam" Type="nvarchar" MaxLength="50" />
+          <Property Name="inspectionparam" Type="nvarchar" MaxLength="50" />
+          <Property Name="presenceparam" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_SYS_RoleProgPriv_SYS_ProgPriv">
+          <End Role="SYS_ProgPriv" Type="I.MES.Library.Store.SYS_ProgPriv" Multiplicity="1" />
+          <End Role="SYS_RoleProgPriv" Type="I.MES.Library.Store.SYS_RoleProgPriv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_ProgPriv">
+              <PropertyRef Name="PrivCode" />
+            </Principal>
+            <Dependent Role="SYS_RoleProgPriv">
+              <PropertyRef Name="PrivCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRoleProgPriv_TRole">
+          <End Role="SYS_Role" Type="I.MES.Library.Store.SYS_Role" Multiplicity="1" />
+          <End Role="SYS_RoleProgPriv" Type="I.MES.Library.Store.SYS_RoleProgPriv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="SYS_RoleProgPriv">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUserRole_TRole">
+          <End Role="SYS_Role" Type="I.MES.Library.Store.SYS_Role" Multiplicity="1" />
+          <End Role="SYS_UserRole" Type="I.MES.Library.Store.SYS_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="SYS_UserRole">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUserRole_TUser">
+          <End Role="SYS_User" Type="I.MES.Library.Store.SYS_User" Multiplicity="1" />
+          <End Role="SYS_UserRole" Type="I.MES.Library.Store.SYS_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserAccount" />
+            </Principal>
+            <Dependent Role="SYS_UserRole">
+              <PropertyRef Name="UserAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="I.MES.Library" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DataEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="MFG_BarcodeBindDet" EntityType="I.MES.Library.MFG_BarcodeBindDet" />
+          <EntitySet Name="MFG_BarcodeControlStatus" EntityType="I.MES.Library.MFG_BarcodeControlStatus" />
+          <EntitySet Name="MFG_BarcodePrintLog" EntityType="I.MES.Library.MFG_BarcodePrintLog" />
+          <EntitySet Name="MFG_BarcodeScanLog" EntityType="I.MES.Library.MFG_BarcodeScanLog" />
+          <EntitySet Name="MFG_BOM" EntityType="I.MES.Library.MFG_BOM" />
+          <EntitySet Name="MFG_BOM_Disassembled" EntityType="I.MES.Library.MFG_BOM_Disassembled" />
+          <EntitySet Name="MFG_PartCategory" EntityType="I.MES.Library.MFG_PartCategory" />
+          <EntitySet Name="MFG_PartDetail" EntityType="I.MES.Library.MFG_PartDetail" />
+          <EntitySet Name="MFG_ProcRoute" EntityType="I.MES.Library.MFG_ProcRoute" />
+          <EntitySet Name="MFG_ProdLine" EntityType="I.MES.Library.MFG_ProdLine" />
+          <EntitySet Name="MFG_ProduceCategory" EntityType="I.MES.Library.MFG_ProduceCategory" />
+          <EntitySet Name="MFG_ProduceLevel" EntityType="I.MES.Library.MFG_ProduceLevel" />
+          <EntitySet Name="MFG_ProductBarcode" EntityType="I.MES.Library.MFG_ProductBarcode" />
+          <EntitySet Name="MFG_ProductColor" EntityType="I.MES.Library.MFG_ProductColor" />
+          <EntitySet Name="MFG_ProdWorkSetp" EntityType="I.MES.Library.MFG_ProdWorkSetp" />
+          <EntitySet Name="MFG_VehicleMode" EntityType="I.MES.Library.MFG_VehicleMode" />
+          <EntitySet Name="MFG_WorkSchedule" EntityType="I.MES.Library.MFG_WorkSchedule" />
+          <EntitySet Name="SYS_Company" EntityType="I.MES.Library.SYS_Company" />
+          <EntitySet Name="SYS_Factory" EntityType="I.MES.Library.SYS_Factory" />
+          <EntitySet Name="SYS_GlobalConfig" EntityType="I.MES.Library.SYS_GlobalConfig" />
+          <EntitySet Name="SYS_GlobalDic" EntityType="I.MES.Library.SYS_GlobalDic" />
+          <EntitySet Name="SYS_MachinePrinterPriv" EntityType="I.MES.Library.SYS_MachinePrinterPriv" />
+          <EntitySet Name="SYS_Printer" EntityType="I.MES.Library.SYS_Printer" />
+          <EntitySet Name="SYS_Prog" EntityType="I.MES.Library.SYS_Prog" />
+          <EntitySet Name="SYS_ProgPriv" EntityType="I.MES.Library.SYS_ProgPriv" />
+          <EntitySet Name="SYS_Role" EntityType="I.MES.Library.SYS_Role" />
+          <EntitySet Name="SYS_RoleProgPriv" EntityType="I.MES.Library.SYS_RoleProgPriv" />
+          <EntitySet Name="SYS_RPTMenu" EntityType="I.MES.Library.SYS_RPTMenu" />
+          <EntitySet Name="SYS_SerialNum" EntityType="I.MES.Library.SYS_SerialNum" />
+          <EntitySet Name="SYS_User" EntityType="I.MES.Library.SYS_User" />
+          <EntitySet Name="SYS_UserRole" EntityType="I.MES.Library.SYS_UserRole" />
+          <EntitySet Name="V_SYS_TABLE_STRUCT" EntityType="I.MES.Library.V_SYS_TABLE_STRUCT" />
+          <AssociationSet Name="FK_SYS_RoleProgPriv_SYS_ProgPriv" Association="I.MES.Library.FK_SYS_RoleProgPriv_SYS_ProgPriv">
+            <End Role="SYS_ProgPriv" EntitySet="SYS_ProgPriv" />
+            <End Role="SYS_RoleProgPriv" EntitySet="SYS_RoleProgPriv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TRoleProgPriv_TRole" Association="I.MES.Library.FK_TRoleProgPriv_TRole">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_RoleProgPriv" EntitySet="SYS_RoleProgPriv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUserRole_TRole" Association="I.MES.Library.FK_TUserRole_TRole">
+            <End Role="SYS_Role" EntitySet="SYS_Role" />
+            <End Role="SYS_UserRole" EntitySet="SYS_UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUserRole_TUser" Association="I.MES.Library.FK_TUserRole_TUser">
+            <End Role="SYS_User" EntitySet="SYS_User" />
+            <End Role="SYS_UserRole" EntitySet="SYS_UserRole" />
+          </AssociationSet>
+          <EntitySet Name="SYS_UserFactoryPriv" EntityType="I.MES.Library.SYS_UserFactoryPriv" />
+          <EntitySet Name="MFG_ProdStation" EntityType="I.MES.Library.MFG_ProdStation" />
+          <EntitySet Name="MFG_RouteStation" EntityType="I.MES.Library.MFG_RouteStation" />
+          <EntitySet Name="MFG_ScanPlugin" EntityType="I.MES.Library.MFG_ScanPlugin" />
+          <EntitySet Name="MFG_ScanPluginParam" EntityType="I.MES.Library.MFG_ScanPluginParam" />
+          <EntitySet Name="MFG_RoteConfig" EntityType="I.MES.Library.MFG_RoteConfig" />
+          <EntitySet Name="MFG_Part" EntityType="I.MES.Library.MFG_Part" />
+          <EntitySet Name="PP_BarCodeTrack" EntityType="I.MES.Library.PP_BarCodeTrack" />
+          <EntitySet Name="PP_ThightRecord" EntityType="I.MES.Library.PP_ThightRecord" />
+          <EntitySet Name="sysdiagrams" EntityType="I.MES.Library.sysdiagrams" />
+          <EntitySet Name="V_MFG_SelectRoteConfig" EntityType="I.MES.Library.V_MFG_SelectRoteConfig" />
+          <EntitySet Name="V_WorkStepParam" EntityType="I.MES.Library.V_WorkStepParam" />
+          <EntitySet Name="MFG_ProdWorkStepParam" EntityType="I.MES.Library.MFG_ProdWorkStepParam" />
+        </EntityContainer>
+        <EntityType Name="MFG_BarcodeBindDet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="BindType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MainBarcode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Barcode" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="BindCfgName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BindStatus" Type="Int32" />
+          <Property Name="BindUser" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BindTime" Type="DateTime" Precision="3" />
+          <Property Name="UnbindUser" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UnbindTime" Type="DateTime" Precision="3" />
+          <Property Name="BindScanSite" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodeControlStatus">
+          <Key>
+            <PropertyRef Name="ControlStatus" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ControlStatus" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ControlStatusName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodePrintLog">
+          <Key>
+            <PropertyRef Name="Barcode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Barcode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Printer" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PrintMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrintTime" Type="DateTime" Precision="3" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="MFG_BarcodeScanLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdLineCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BarCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="StationCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OrigPartNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OrigQualityStatus" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="NewPartNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="NewQualityStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OpType" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OrderNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_BOM">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="ParentPartNo" />
+            <PropertyRef Name="BomVer" />
+            <PropertyRef Name="ItemNo" />
+            <PropertyRef Name="ComponentPartNo" />
+            <PropertyRef Name="EffStartTime" />
+            <PropertyRef Name="EffExpireTime" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ParentPartNo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BomVer" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ItemNo" Type="Int32" Nullable="false" />
+          <Property Name="ComponentPartNo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Qty" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="EffStartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EffExpireTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="OperateProcess" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Scrp" Type="Single" />
+          <Property Name="Ref1" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProjectType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsDel" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_BOM_Disassembled">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PartNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ParentPartNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ComponentPartNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="BomVer" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ItemNo" Type="Int32" Nullable="false" />
+          <Property Name="Qty" Type="Decimal" Nullable="false" Precision="38" Scale="18" />
+          <Property Name="EffStartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EffExpireTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ComponentPMCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="DisassembleTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Level" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_PartCategory">
+          <Key>
+            <PropertyRef Name="CategoryCode" />
+            <PropertyRef Name="CategoryType" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryDescription" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryType" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_PartDetail">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PartNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PartType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="PartDesc" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="PartDescEn" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Unit" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MaterialCtgy" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="BaseMaterial" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProductLevel" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ShareProperty" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Brand" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Critical" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Consumable" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ProduceLine" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PMCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SpecialPMCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ExtPurLoc" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="NeedIQC" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ERPSys" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IsD" Type="Boolean" Nullable="false" />
+          <Property Name="QtyPerPkg" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="SizeDimension" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="ReorderPoint" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="JointlyPartFlag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="MFG_ProcRoute">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdLineCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoteCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoteName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProdLine">
+          <Key>
+            <PropertyRef Name="ProdLineCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdLineCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ProdLineName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProduceCategory">
+          <Key>
+            <PropertyRef Name="ProduceCtgyCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProduceCtgyCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryDesc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CategoryBriefCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="InitPartNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="InitPartVersion" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="InitControlStatus" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="InitQualityStatus" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="BarcodePrintLot" Type="Int32" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="VehicleMode" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CustAssemblyLine" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Upper" Type="Int32" />
+          <Property Name="CodeLEFT" Type="Int32" />
+          <Property Name="Barcodewidth" Type="Int32" />
+          <Property Name="Barcodeheight" Type="Int32" />
+          <Property Name="Fontleft" Type="Int32" />
+          <Property Name="Fontsize" Type="Int32" />
+          <Property Name="Fontname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ISQRCode" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MFG_ProduceLevel">
+          <Key>
+            <PropertyRef Name="ProduceLevelCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProduceLevelCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProduceLevelName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProductBarcode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Barcode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OrderNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CurrentPartNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="QualityStatus" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ControlStatus" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PrintTime" Type="DateTime" Precision="3" />
+          <Property Name="BarcodeStatus" Type="Int32" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProductColor">
+          <Key>
+            <PropertyRef Name="ColorCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ColorCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ColorName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ColorEName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsDel" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MFG_ProdWorkSetp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RouteSationID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PluginID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="StepDesc" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="RowNum" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_VehicleMode">
+          <Key>
+            <PropertyRef Name="VehicleMode" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleMode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="VehicleName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MFG_WorkSchedule">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+            <PropertyRef Name="ProdDate" />
+            <PropertyRef Name="PartNo" />
+            <PropertyRef Name="WorkVer" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ProdDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PartNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Qty" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="Unit" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="WorkVer" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_Company">
+          <Key>
+            <PropertyRef Name="CompanyCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyFullName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyHUCode" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="SAPCompanyCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="QADCompanyCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_Factory">
+          <Key>
+            <PropertyRef Name="FactoryCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FactoryName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyMachine" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_GlobalConfig">
+          <Key>
+            <PropertyRef Name="ConfigName" />
+            <PropertyRef Name="ParamCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConfigName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ParamCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ParamValue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ParamDesc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="CanEdit" Type="Boolean" Nullable="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FactoryCode" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_GlobalDic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CodeValue" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Desc" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_MachinePrinterPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MachineName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrinterCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_Printer">
+          <Key>
+            <PropertyRef Name="PrinterCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PrinterCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PrinterServer" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrinterName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrinterDesc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrinterLocation" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_Prog">
+          <Key>
+            <PropertyRef Name="ProgCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProgCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProgName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProgType" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProgForm" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AppType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_ProgPriv">
+          <Key>
+            <PropertyRef Name="PrivCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PrivCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProgCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PrivName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrivDesc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PrivID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SYS_RoleProgPriv" Relationship="I.MES.Library.FK_SYS_RoleProgPriv_SYS_ProgPriv" FromRole="SYS_ProgPriv" ToRole="SYS_RoleProgPriv" />
+        </EntityType>
+        <EntityType Name="SYS_Role">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RoleDesc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CrtUser" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CrtTime" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CrtMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyUser" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RoleID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SYS_RoleProgPriv" Relationship="I.MES.Library.FK_TRoleProgPriv_TRole" FromRole="SYS_Role" ToRole="SYS_RoleProgPriv" />
+          <NavigationProperty Name="SYS_UserRole" Relationship="I.MES.Library.FK_TUserRole_TRole" FromRole="SYS_Role" ToRole="SYS_UserRole" />
+        </EntityType>
+        <EntityType Name="SYS_RoleProgPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PrivCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SYS_ProgPriv" Relationship="I.MES.Library.FK_SYS_RoleProgPriv_SYS_ProgPriv" FromRole="SYS_RoleProgPriv" ToRole="SYS_ProgPriv" />
+          <NavigationProperty Name="SYS_Role" Relationship="I.MES.Library.FK_TRoleProgPriv_TRole" FromRole="SYS_RoleProgPriv" ToRole="SYS_Role" />
+        </EntityType>
+        <EntityType Name="SYS_RPTMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ProgCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RightID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Target" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MenuName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ParentID" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="OrderNum" Type="Int32" />
+          <Property Name="IconUrl" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="IconRow" Type="Int32" />
+          <Property Name="IconCol" Type="Int32" />
+          <Property Name="PrivID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_SerialNum">
+          <Key>
+            <PropertyRef Name="Prefix" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Prefix" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentNum" Type="Int32" Nullable="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_User">
+          <Key>
+            <PropertyRef Name="UserAccount" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserWorkID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="LatestLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="LatestLoginMachine" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DomainAccount" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SYS_UserRole" Relationship="I.MES.Library.FK_TUserRole_TUser" FromRole="SYS_User" ToRole="SYS_UserRole" />
+        </EntityType>
+        <EntityType Name="SYS_UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RoleCode" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EffitiveTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExpireTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreateUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyUserAccount" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LatestModifyTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LatestModifyMachine" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SYS_Role" Relationship="I.MES.Library.FK_TUserRole_TRole" FromRole="SYS_UserRole" ToRole="SYS_Role" />
+          <NavigationProperty Name="SYS_User" Relationship="I.MES.Library.FK_TUserRole_TUser" FromRole="SYS_UserRole" ToRole="SYS_User" />
+        </EntityType>
+        <EntityType Name="V_SYS_TABLE_STRUCT">
+          <Key>
+            <PropertyRef Name="TableName" />
+            <PropertyRef Name="ColName" />
+            <PropertyRef Name="TypeName" />
+            <PropertyRef Name="Max_Length" />
+            <PropertyRef Name="IsPrimary" />
+            <PropertyRef Name="IsIdentity" />
+          </Key>
+          <Property Name="SchemaName" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="TableName" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="ColName" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="TypeName" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="Max_Length" Type="Int16" Nullable="false" />
+          <Property Name="IsPrimary" Type="Boolean" Nullable="false" />
+          <Property Name="IsIdentity" Type="Int32" Nullable="false" />
+          <Property Name="defaultVaule" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_SYS_RoleProgPriv_SYS_ProgPriv">
+          <End Role="SYS_ProgPriv" Type="I.MES.Library.SYS_ProgPriv" Multiplicity="1" />
+          <End Role="SYS_RoleProgPriv" Type="I.MES.Library.SYS_RoleProgPriv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_ProgPriv">
+              <PropertyRef Name="PrivCode" />
+            </Principal>
+            <Dependent Role="SYS_RoleProgPriv">
+              <PropertyRef Name="PrivCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TRoleProgPriv_TRole">
+          <End Role="SYS_Role" Type="I.MES.Library.SYS_Role" Multiplicity="1" />
+          <End Role="SYS_RoleProgPriv" Type="I.MES.Library.SYS_RoleProgPriv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="SYS_RoleProgPriv">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUserRole_TRole">
+          <End Role="SYS_Role" Type="I.MES.Library.SYS_Role" Multiplicity="1" />
+          <End Role="SYS_UserRole" Type="I.MES.Library.SYS_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_Role">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="SYS_UserRole">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUserRole_TUser">
+          <End Role="SYS_User" Type="I.MES.Library.SYS_User" Multiplicity="1" />
+          <End Role="SYS_UserRole" Type="I.MES.Library.SYS_UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_User">
+              <PropertyRef Name="UserAccount" />
+            </Principal>
+            <Dependent Role="SYS_UserRole">
+              <PropertyRef Name="UserAccount" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SYS_UserFactoryPriv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserAccount" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FactoryCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Enabled" Nullable="false" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+          <Property Type="String" Name="CreateUserAccount" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateMachine" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LatestModifyUserAccount" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LatestModifyTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LatestModifyMachine" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MFG_ProdStation">
+          <Key>
+            <PropertyRef Name="FatoryCode" />
+            <PropertyRef Name="ProdLineCode" />
+            <PropertyRef Name="StationCode" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FatoryCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProdLineCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MFG_RouteStation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FactoryCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoteID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RowNum" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MFG_ScanPlugin">
+          <Key>
+            <PropertyRef Name="PluginID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PluginID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PluginName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PluginType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PluginDesc" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsSelf" />
+          <Property Type="DateTime" Name="CreateTime" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MFG_ScanPluginParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PluginID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParamName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParamDesc" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IsNecessary" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MFG_RoteConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RouteID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VicheModel" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MFG_Part">
+          <Key>
+            <PropertyRef Name="PartNo" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PartNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BriefDesc" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompPartNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MeterialDescrition" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartDescription" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VehicleMode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ColorCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartLevel" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PP_BarCodeTrack">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SerialNum" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemType" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemValue" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PP_ThightRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SerialNum" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PartNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StationCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ScrewNo" />
+          <Property Type="String" Name="Trque" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Angel" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="X" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Y" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Result" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ThightTime" Precision="3" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="V_MFG_SelectRoteConfig">
+          <Key>
+            <PropertyRef Name="RouteID" />
+            <PropertyRef Name="RouteCode" />
+            <PropertyRef Name="VicheModel" />
+            <PropertyRef Name="PartNo" />
+            <PropertyRef Name="CreateTime" />
+            <PropertyRef Name="RoteCode" />
+          </Key>
+          <Property Type="String" Name="RouteID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RouteCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VicheModel" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoteCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoteName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="V_WorkStepParam">
+          <Key>
+            <PropertyRef Name="StepID" />
+          </Key>
+          <Property Type="String" Name="StepID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Default_image_address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PartName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Check_key" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Screw_the_number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Screw_position" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="torque" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="torqueoffset" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Screw_picture_Pset" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Countdown_time" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="printparam" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="picparam" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="checkparam" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="inspectionparam" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="presenceparam" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MFG_ProdWorkStepParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StepID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParamName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParamDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParamValue" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CreateMachine" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ModifyTime" Precision="3" />
+          <Property Type="String" Name="ModifyMachine" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IMESLibraryStoreContainer" CdmEntityContainer="DataEntities">
+          <EntitySetMapping Name="MFG_BarcodeBindDet">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BarcodeBindDet">
+              <MappingFragment StoreEntitySet="MFG_BarcodeBindDet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BindType" ColumnName="BindType" />
+                <ScalarProperty Name="MainBarcode" ColumnName="MainBarcode" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="BindCfgName" ColumnName="BindCfgName" />
+                <ScalarProperty Name="BindStatus" ColumnName="BindStatus" />
+                <ScalarProperty Name="BindUser" ColumnName="BindUser" />
+                <ScalarProperty Name="BindTime" ColumnName="BindTime" />
+                <ScalarProperty Name="UnbindUser" ColumnName="UnbindUser" />
+                <ScalarProperty Name="UnbindTime" ColumnName="UnbindTime" />
+                <ScalarProperty Name="BindScanSite" ColumnName="BindScanSite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_BarcodeControlStatus">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BarcodeControlStatus">
+              <MappingFragment StoreEntitySet="MFG_BarcodeControlStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ControlStatus" ColumnName="ControlStatus" />
+                <ScalarProperty Name="ControlStatusName" ColumnName="ControlStatusName" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_BarcodePrintLog">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BarcodePrintLog">
+              <MappingFragment StoreEntitySet="MFG_BarcodePrintLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="Printer" ColumnName="Printer" />
+                <ScalarProperty Name="PrintMachine" ColumnName="PrintMachine" />
+                <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_BarcodeScanLog">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BarcodeScanLog">
+              <MappingFragment StoreEntitySet="MFG_BarcodeScanLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ProdLineCode" ColumnName="ProdLineCode" />
+                <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+                <ScalarProperty Name="StationCode" ColumnName="StationCode" />
+                <ScalarProperty Name="OrigPartNo" ColumnName="OrigPartNo" />
+                <ScalarProperty Name="OrigQualityStatus" ColumnName="OrigQualityStatus" />
+                <ScalarProperty Name="NewPartNo" ColumnName="NewPartNo" />
+                <ScalarProperty Name="NewQualityStatus" ColumnName="NewQualityStatus" />
+                <ScalarProperty Name="OpType" ColumnName="OpType" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_BOM">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BOM">
+              <MappingFragment StoreEntitySet="MFG_BOM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ParentPartNo" ColumnName="ParentPartNo" />
+                <ScalarProperty Name="BomVer" ColumnName="BomVer" />
+                <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+                <ScalarProperty Name="ComponentPartNo" ColumnName="ComponentPartNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="EffStartTime" ColumnName="EffStartTime" />
+                <ScalarProperty Name="EffExpireTime" ColumnName="EffExpireTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OperateProcess" ColumnName="OperateProcess" />
+                <ScalarProperty Name="Scrp" ColumnName="Scrp" />
+                <ScalarProperty Name="Ref1" ColumnName="Ref1" />
+                <ScalarProperty Name="ProjectType" ColumnName="ProjectType" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_BOM_Disassembled">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_BOM_Disassembled">
+              <MappingFragment StoreEntitySet="MFG_BOM_Disassembled">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="ParentPartNo" ColumnName="ParentPartNo" />
+                <ScalarProperty Name="ComponentPartNo" ColumnName="ComponentPartNo" />
+                <ScalarProperty Name="BomVer" ColumnName="BomVer" />
+                <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="EffStartTime" ColumnName="EffStartTime" />
+                <ScalarProperty Name="EffExpireTime" ColumnName="EffExpireTime" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ComponentPMCode" ColumnName="ComponentPMCode" />
+                <ScalarProperty Name="DisassembleTime" ColumnName="DisassembleTime" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_PartCategory">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_PartCategory">
+              <MappingFragment StoreEntitySet="MFG_PartCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+                <ScalarProperty Name="CategoryType" ColumnName="CategoryType" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_PartDetail">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_PartDetail">
+              <MappingFragment StoreEntitySet="MFG_PartDetail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="PartType" ColumnName="PartType" />
+                <ScalarProperty Name="PartDesc" ColumnName="PartDesc" />
+                <ScalarProperty Name="PartDescEn" ColumnName="PartDescEn" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="MaterialCtgy" ColumnName="MaterialCtgy" />
+                <ScalarProperty Name="BaseMaterial" ColumnName="BaseMaterial" />
+                <ScalarProperty Name="ProductLevel" ColumnName="ProductLevel" />
+                <ScalarProperty Name="ShareProperty" ColumnName="ShareProperty" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Critical" ColumnName="Critical" />
+                <ScalarProperty Name="Consumable" ColumnName="Consumable" />
+                <ScalarProperty Name="ProduceLine" ColumnName="ProduceLine" />
+                <ScalarProperty Name="PMCode" ColumnName="PMCode" />
+                <ScalarProperty Name="SpecialPMCode" ColumnName="SpecialPMCode" />
+                <ScalarProperty Name="ExtPurLoc" ColumnName="ExtPurLoc" />
+                <ScalarProperty Name="NeedIQC" ColumnName="NeedIQC" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ERPSys" ColumnName="ERPSys" />
+                <ScalarProperty Name="IsD" ColumnName="IsD" />
+                <ScalarProperty Name="QtyPerPkg" ColumnName="QtyPerPkg" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="SizeDimension" ColumnName="SizeDimension" />
+                <ScalarProperty Name="ReorderPoint" ColumnName="ReorderPoint" />
+                <ScalarProperty Name="JointlyPartFlag" ColumnName="JointlyPartFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProcRoute">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProcRoute">
+              <MappingFragment StoreEntitySet="MFG_ProcRoute">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ProdLineCode" ColumnName="ProdLineCode" />
+                <ScalarProperty Name="RoteCode" ColumnName="RoteCode" />
+                <ScalarProperty Name="RoteName" ColumnName="RoteName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProdLine">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProdLine">
+              <MappingFragment StoreEntitySet="MFG_ProdLine">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ProdLineCode" ColumnName="ProdLineCode" />
+                <ScalarProperty Name="ProdLineName" ColumnName="ProdLineName" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProduceCategory">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProduceCategory">
+              <MappingFragment StoreEntitySet="MFG_ProduceCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProduceCtgyCode" ColumnName="ProduceCtgyCode" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryDesc" ColumnName="CategoryDesc" />
+                <ScalarProperty Name="CategoryBriefCode" ColumnName="CategoryBriefCode" />
+                <ScalarProperty Name="InitPartNo" ColumnName="InitPartNo" />
+                <ScalarProperty Name="InitPartVersion" ColumnName="InitPartVersion" />
+                <ScalarProperty Name="InitControlStatus" ColumnName="InitControlStatus" />
+                <ScalarProperty Name="InitQualityStatus" ColumnName="InitQualityStatus" />
+                <ScalarProperty Name="BarcodePrintLot" ColumnName="BarcodePrintLot" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="VehicleMode" ColumnName="VehicleMode" />
+                <ScalarProperty Name="CustAssemblyLine" ColumnName="CustAssemblyLine" />
+                <ScalarProperty Name="Upper" ColumnName="Upper" />
+                <ScalarProperty Name="CodeLEFT" ColumnName="CodeLEFT" />
+                <ScalarProperty Name="Barcodewidth" ColumnName="Barcodewidth" />
+                <ScalarProperty Name="Barcodeheight" ColumnName="Barcodeheight" />
+                <ScalarProperty Name="Fontleft" ColumnName="Fontleft" />
+                <ScalarProperty Name="Fontsize" ColumnName="Fontsize" />
+                <ScalarProperty Name="Fontname" ColumnName="Fontname" />
+                <ScalarProperty Name="ISQRCode" ColumnName="ISQRCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProduceLevel">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProduceLevel">
+              <MappingFragment StoreEntitySet="MFG_ProduceLevel">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProduceLevelCode" ColumnName="ProduceLevelCode" />
+                <ScalarProperty Name="ProduceLevelName" ColumnName="ProduceLevelName" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProductBarcode">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProductBarcode">
+              <MappingFragment StoreEntitySet="MFG_ProductBarcode">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="CurrentPartNo" ColumnName="CurrentPartNo" />
+                <ScalarProperty Name="QualityStatus" ColumnName="QualityStatus" />
+                <ScalarProperty Name="ControlStatus" ColumnName="ControlStatus" />
+                <ScalarProperty Name="PrintTime" ColumnName="PrintTime" />
+                <ScalarProperty Name="BarcodeStatus" ColumnName="BarcodeStatus" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProductColor">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProductColor">
+              <MappingFragment StoreEntitySet="MFG_ProductColor">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+                <ScalarProperty Name="ColorEName" ColumnName="ColorEName" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProdWorkSetp">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProdWorkSetp">
+              <MappingFragment StoreEntitySet="MFG_ProdWorkSetp">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RouteSationID" ColumnName="RouteSationID" />
+                <ScalarProperty Name="PluginID" ColumnName="PluginID" />
+                <ScalarProperty Name="StepDesc" ColumnName="StepDesc" />
+                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_VehicleMode">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_VehicleMode">
+              <MappingFragment StoreEntitySet="MFG_VehicleMode">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VehicleMode" ColumnName="VehicleMode" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_WorkSchedule">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_WorkSchedule">
+              <MappingFragment StoreEntitySet="MFG_WorkSchedule">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ProdDate" ColumnName="ProdDate" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="WorkVer" ColumnName="WorkVer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Company">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_Company">
+              <MappingFragment StoreEntitySet="SYS_Company">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyFullName" ColumnName="CompanyFullName" />
+                <ScalarProperty Name="CompanyHUCode" ColumnName="CompanyHUCode" />
+                <ScalarProperty Name="SAPCompanyCode" ColumnName="SAPCompanyCode" />
+                <ScalarProperty Name="QADCompanyCode" ColumnName="QADCompanyCode" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Factory">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_Factory">
+              <MappingFragment StoreEntitySet="SYS_Factory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_GlobalConfig">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_GlobalConfig">
+              <MappingFragment StoreEntitySet="SYS_GlobalConfig">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConfigName" ColumnName="ConfigName" />
+                <ScalarProperty Name="ParamCode" ColumnName="ParamCode" />
+                <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+                <ScalarProperty Name="ParamDesc" ColumnName="ParamDesc" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_GlobalDic">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_GlobalDic">
+              <MappingFragment StoreEntitySet="SYS_GlobalDic">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CodeName" ColumnName="CodeName" />
+                <ScalarProperty Name="CodeValue" ColumnName="CodeValue" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_MachinePrinterPriv">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_MachinePrinterPriv">
+              <MappingFragment StoreEntitySet="SYS_MachinePrinterPriv">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="PrinterCode" ColumnName="PrinterCode" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Printer">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_Printer">
+              <MappingFragment StoreEntitySet="SYS_Printer">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PrinterCode" ColumnName="PrinterCode" />
+                <ScalarProperty Name="PrinterServer" ColumnName="PrinterServer" />
+                <ScalarProperty Name="PrinterName" ColumnName="PrinterName" />
+                <ScalarProperty Name="PrinterDesc" ColumnName="PrinterDesc" />
+                <ScalarProperty Name="PrinterLocation" ColumnName="PrinterLocation" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Prog">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_Prog">
+              <MappingFragment StoreEntitySet="SYS_Prog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProgCode" ColumnName="ProgCode" />
+                <ScalarProperty Name="ProgName" ColumnName="ProgName" />
+                <ScalarProperty Name="ProgType" ColumnName="ProgType" />
+                <ScalarProperty Name="ProgForm" ColumnName="ProgForm" />
+                <ScalarProperty Name="AppType" ColumnName="AppType" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_ProgPriv">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_ProgPriv">
+              <MappingFragment StoreEntitySet="SYS_ProgPriv">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PrivCode" ColumnName="PrivCode" />
+                <ScalarProperty Name="ProgCode" ColumnName="ProgCode" />
+                <ScalarProperty Name="PrivName" ColumnName="PrivName" />
+                <ScalarProperty Name="PrivDesc" ColumnName="PrivDesc" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="PrivID" ColumnName="PrivID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_Role">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_Role">
+              <MappingFragment StoreEntitySet="SYS_Role">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+                <ScalarProperty Name="CrtUser" ColumnName="CrtUser" />
+                <ScalarProperty Name="CrtTime" ColumnName="CrtTime" />
+                <ScalarProperty Name="CrtMachine" ColumnName="CrtMachine" />
+                <ScalarProperty Name="LatestModifyUser" ColumnName="LatestModifyUser" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_RoleProgPriv">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_RoleProgPriv">
+              <MappingFragment StoreEntitySet="SYS_RoleProgPriv">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="PrivCode" ColumnName="PrivCode" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_RPTMenu">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_RPTMenu">
+              <MappingFragment StoreEntitySet="SYS_RPTMenu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="ProgCode" ColumnName="ProgCode" />
+                <ScalarProperty Name="RightID" ColumnName="RightID" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+                <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
+                <ScalarProperty Name="IconRow" ColumnName="IconRow" />
+                <ScalarProperty Name="IconCol" ColumnName="IconCol" />
+                <ScalarProperty Name="PrivID" ColumnName="PrivID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SerialNum">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_SerialNum">
+              <MappingFragment StoreEntitySet="SYS_SerialNum">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="CurrentNum" ColumnName="CurrentNum" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_User">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_User">
+              <MappingFragment StoreEntitySet="SYS_User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserWorkID" ColumnName="UserWorkID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LatestLoginTime" ColumnName="LatestLoginTime" />
+                <ScalarProperty Name="LatestLoginMachine" ColumnName="LatestLoginMachine" />
+                <ScalarProperty Name="LatestModifyUser" ColumnName="LatestModifyUser" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="DomainAccount" ColumnName="DomainAccount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_UserRole">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_UserRole">
+              <MappingFragment StoreEntitySet="SYS_UserRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="EffitiveTime" ColumnName="EffitiveTime" />
+                <ScalarProperty Name="ExpireTime" ColumnName="ExpireTime" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_SYS_TABLE_STRUCT">
+            <EntityTypeMapping TypeName="I.MES.Library.V_SYS_TABLE_STRUCT">
+              <MappingFragment StoreEntitySet="V_SYS_TABLE_STRUCT">
+                <ScalarProperty Name="SchemaName" ColumnName="SchemaName" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="ColName" ColumnName="ColName" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Max_Length" ColumnName="Max_Length" />
+                <ScalarProperty Name="IsPrimary" ColumnName="IsPrimary" />
+                <ScalarProperty Name="IsIdentity" ColumnName="IsIdentity" />
+                <ScalarProperty Name="defaultVaule" ColumnName="defaultVaule" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_UserFactoryPriv">
+            <EntityTypeMapping TypeName="I.MES.Library.SYS_UserFactoryPriv">
+              <MappingFragment StoreEntitySet="SYS_UserFactoryPriv">
+                <ScalarProperty Name="LatestModifyMachine" ColumnName="LatestModifyMachine" />
+                <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+                <ScalarProperty Name="LatestModifyUserAccount" ColumnName="LatestModifyUserAccount" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateUserAccount" ColumnName="CreateUserAccount" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProdStation">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProdStation">
+              <MappingFragment StoreEntitySet="MFG_ProdStation">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="StationName" ColumnName="StationName" />
+                <ScalarProperty Name="StationCode" ColumnName="StationCode" />
+                <ScalarProperty Name="ProdLineCode" ColumnName="ProdLineCode" />
+                <ScalarProperty Name="FatoryCode" ColumnName="FatoryCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_RouteStation">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_RouteStation">
+              <MappingFragment StoreEntitySet="MFG_RouteStation">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+                <ScalarProperty Name="StationName" ColumnName="StationName" />
+                <ScalarProperty Name="StationCode" ColumnName="StationCode" />
+                <ScalarProperty Name="RoteID" ColumnName="RoteID" />
+                <ScalarProperty Name="FactoryCode" ColumnName="FactoryCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ScanPlugin">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ScanPlugin">
+              <MappingFragment StoreEntitySet="MFG_ScanPlugin">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="IsSelf" ColumnName="IsSelf" />
+                <ScalarProperty Name="PluginDesc" ColumnName="PluginDesc" />
+                <ScalarProperty Name="PluginType" ColumnName="PluginType" />
+                <ScalarProperty Name="PluginName" ColumnName="PluginName" />
+                <ScalarProperty Name="PluginID" ColumnName="PluginID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ScanPluginParam">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ScanPluginParam">
+              <MappingFragment StoreEntitySet="MFG_ScanPluginParam">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="IsNecessary" ColumnName="IsNecessary" />
+                <ScalarProperty Name="ParamDesc" ColumnName="ParamDesc" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="PluginID" ColumnName="PluginID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_RoteConfig">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_RoteConfig">
+              <MappingFragment StoreEntitySet="MFG_RoteConfig">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="VicheModel" ColumnName="VicheModel" />
+                <ScalarProperty Name="RouteID" ColumnName="RouteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_Part">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_Part">
+              <MappingFragment StoreEntitySet="MFG_Part">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="PartLevel" ColumnName="PartLevel" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="VehicleMode" ColumnName="VehicleMode" />
+                <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
+                <ScalarProperty Name="MeterialDescrition" ColumnName="MeterialDescrition" />
+                <ScalarProperty Name="CompPartNo" ColumnName="CompPartNo" />
+                <ScalarProperty Name="BriefDesc" ColumnName="BriefDesc" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PP_BarCodeTrack">
+            <EntityTypeMapping TypeName="I.MES.Library.PP_BarCodeTrack">
+              <MappingFragment StoreEntitySet="PP_BarCodeTrack">
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ItemValue" ColumnName="ItemValue" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="StationCode" ColumnName="StationCode" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PP_ThightRecord">
+            <EntityTypeMapping TypeName="I.MES.Library.PP_ThightRecord">
+              <MappingFragment StoreEntitySet="PP_ThightRecord">
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ThightTime" ColumnName="ThightTime" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Angel" ColumnName="Angel" />
+                <ScalarProperty Name="Trque" ColumnName="Trque" />
+                <ScalarProperty Name="ScrewNo" ColumnName="ScrewNo" />
+                <ScalarProperty Name="StationCode" ColumnName="StationCode" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="I.MES.Library.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_MFG_SelectRoteConfig">
+            <EntityTypeMapping TypeName="I.MES.Library.V_MFG_SelectRoteConfig">
+              <MappingFragment StoreEntitySet="V_MFG_SelectRoteConfig">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RoteName" ColumnName="RoteName" />
+                <ScalarProperty Name="RoteCode" ColumnName="RoteCode" />
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+                <ScalarProperty Name="VicheModel" ColumnName="VicheModel" />
+                <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+                <ScalarProperty Name="RouteID" ColumnName="RouteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_WorkStepParam">
+            <EntityTypeMapping TypeName="I.MES.Library.V_WorkStepParam">
+              <MappingFragment StoreEntitySet="V_WorkStepParam">
+                <ScalarProperty Name="presenceparam" ColumnName="presenceparam" />
+                <ScalarProperty Name="inspectionparam" ColumnName="inspectionparam" />
+                <ScalarProperty Name="checkparam" ColumnName="checkparam" />
+                <ScalarProperty Name="picparam" ColumnName="picparam" />
+                <ScalarProperty Name="printparam" ColumnName="printparam" />
+                <ScalarProperty Name="Countdown_time" ColumnName="Countdown time" />
+                <ScalarProperty Name="Screw_picture_Pset" ColumnName="Screw picture Pset" />
+                <ScalarProperty Name="torqueoffset" ColumnName="torqueoffset" />
+                <ScalarProperty Name="torque" ColumnName="torque" />
+                <ScalarProperty Name="Screw_position" ColumnName="Screw position" />
+                <ScalarProperty Name="Screw_the_number" ColumnName="Screw the number" />
+                <ScalarProperty Name="Check_key" ColumnName="Check key" />
+                <ScalarProperty Name="PartName" ColumnName="PartName" />
+                <ScalarProperty Name="Default_image_address" ColumnName="Default image address" />
+                <ScalarProperty Name="StepID" ColumnName="StepID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MFG_ProdWorkStepParam">
+            <EntityTypeMapping TypeName="I.MES.Library.MFG_ProdWorkStepParam">
+              <MappingFragment StoreEntitySet="MFG_ProdWorkStepParam">
+                <ScalarProperty Name="ModifyMachine" ColumnName="ModifyMachine" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateMachine" ColumnName="CreateMachine" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+                <ScalarProperty Name="ParamDesc" ColumnName="ParamDesc" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="StepID" ColumnName="StepID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

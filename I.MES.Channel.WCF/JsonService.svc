@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="I.MES.Channel.WCF.JsonService" CodeBehind="JsonService.svc.cs" %>

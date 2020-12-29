@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FF76D65-50F7-4B82-BB81-906E8F1E9F89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I.MES.Models</RootNamespace>
+    <AssemblyName>I.MES.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoSightModel\BaoSightClearUpFinish.cs" />
+    <Compile Include="BaoSightModel\BaoSightEmptyBoxOutApply.cs" />
+    <Compile Include="BaoSightModel\BaoSightOpenPackage.cs" />
+    <Compile Include="BaoSightModel\BaoSightOpenPackageFinish.cs" />
+    <Compile Include="BaoSightModel\BaoSightStorageApply.cs" />
+    <Compile Include="BaoSightModel\RKBinCode.cs" />
+    <Compile Include="IFModel\EQP\IFS_EKProdDeclar.cs" />
+    <Compile Include="JsonReault.cs" />
+    <Compile Include="ExportCell.cs" />
+    <Compile Include="IFEquip\AsmMouldPullList.cs" />
+    <Compile Include="IFEquip\CleanData.cs" />
+    <Compile Include="IFEquip\ThingWorxJson.cs" />
+    <Compile Include="IFEquip\ThingWorxReturnJson.cs" />
+    <Compile Include="IFModel\ActionMessage.cs" />
+    <Compile Include="IFModel\BarcodePrintModel.cs" />
+    <Compile Include="IFModel\BarcodePrintReq.cs" />
+    <Compile Include="IFModel\BatchFreeze.cs" />
+    <Compile Include="IFModel\DeliverReq.cs" />
+    <Compile Include="IFModel\EQP\IFS_TGProdDeclar.cs" />
+    <Compile Include="IFModel\IFS_IntercompanyReq.cs" />
+    <Compile Include="IFModel\ClosedWFMMaterialReqBill.cs" />
+    <Compile Include="IFModel\IFS_InterCompRcvSyncReq.cs" />
+    <Compile Include="IFModel\IFS_SupplierAsn.cs" />
+    <Compile Include="IFModel\IFS_ReturnReq.cs" />
+    <Compile Include="IFModel\IFS_SOReturnReq.cs" />
+    <Compile Include="IFModel\IFS_GRC_UserRole.cs" />
+    <Compile Include="IFModel\IFS_GRC_ReturnObject_.cs" />
+    <Compile Include="IFModel\IFS_GRC_RequestUserFactory.cs" />
+    <Compile Include="IFModel\IFS_GRC_RequestResetUserPwd.cs" />
+    <Compile Include="IFModel\IFS_InterCompanyOrderReq.cs" />
+    <Compile Include="IFModel\KepMessage.cs" />
+    <Compile Include="IFModel\MESPartNoAndTime.cs" />
+    <Compile Include="IFModel\SPS_PkgChg.cs" />
+    <Compile Include="IFModel\SPS_Trans.cs" />
+    <Compile Include="IFModel\SPS_TransReq.cs" />
+    <Compile Include="IFModel\StkQtyMAXMIN.cs" />
+    <Compile Include="IFModel\WFMDirectPostTaskNew.cs" />
+    <Compile Include="DataEntitiesModels.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IFModel\PurchaseOrderReq.cs" />
+    <Compile Include="IFModel\PurchaseOrderSync.cs" />
+    <Compile Include="IFModel\ReceiptStatusInterface.cs" />
+    <Compile Include="IFModel\WFMDirectPostTask.cs" />
+    <Compile Include="IFModel\WebServiceResult.cs" />
+    <Compile Include="IFModel\ProductBarcode.cs" />
+    <Compile Include="IFModel\ProductPart.cs" />
+    <Compile Include="IFModel\ProductHU.cs" />
+    <Compile Include="IFModel\IFS_ProductBarcodeReq.cs" />
+    <Compile Include="IFModel\IFS_HUPkgMstrReq.cs" />
+    <Compile Include="IFModel\IFS_HUPkgDetReq.cs" />
+    <Compile Include="IFModel\IFS_RackReq.cs" />
+    <Compile Include="IFModel\IFS_PackageTypeReq.cs" />
+    <Compile Include="KeyValueModel.cs" />
+    <Compile Include="MenuTree.cs" />
+    <Compile Include="MFG_BarcodeBindDet.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_BarcodeControlStatus.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_BarcodePrintLog.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_BarcodeScanLog.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_BOM.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_BOM_Disassembled.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_Part.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_PartCategory.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_PartDetail.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProcRoute.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProdLine.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProdStation.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProduceCategory.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProduceLevel.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProductBarcode.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProductColor.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProdWorkSetp.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ProdWorkStepParam.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_RoteConfig.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_RouteStation.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ScanPlugin.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_ScanPluginParam.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_VehicleMode.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MFG_WorkSchedule.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPC\Tag.cs" />
+    <Compile Include="OPC\TailBarCode.cs" />
+    <Compile Include="PP_BarCodeTrack.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_ThightRecord.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectListItem.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Factory.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GlobalDic.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_MachinePrinterPriv.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_RPTMenu.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Company.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_GlobalConfig.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Printer.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Prog.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_ProgPriv.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_Role.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_RoleProgPriv.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_RoleStkPrivViewModel.cs" />
+    <Compile Include="SYS_SerialNum.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_User.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_UserFactoryPriv.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SYS_UserRole.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualTransModel.cs" />
+    <Compile Include="V_MFG_SelectRoteConfig.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SYS_TABLE_STRUCT.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_WorkStepParam.cs">
+      <DependentUpon>DataEntitiesModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WhereCondition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataEntitiesModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataEntitiesModels.cs</LastGenOutput>
+    </None>
+    <Compile Include="IFModel\IFS_GRC_RequestUserFactoryRoles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\I.MES.Tools\I.MES.Tools.csproj">
+      <Project>{32c3aa15-e04a-4cce-958c-9aa93ff446d4}</Project>
+      <Name>I.MES.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IFModel\EMS\" />
+    <Folder Include="ReturnModel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

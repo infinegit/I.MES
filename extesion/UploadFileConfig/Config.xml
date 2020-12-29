@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xml>
+  <Row ID="AT">
+    <Fac>AT</Fac>
+    <IpAddress>10.250.16.211</IpAddress>
+    <port>35540</port>
+    <BasePath>~\MES</BasePath>
+  </Row>
+  <Row ID="PD">
+    <Fac>PD</Fac>
+    <IpAddress>127.0.0.1</IpAddress>
+    <port>35540</port>
+    <BasePath>~\MES</BasePath>
+  </Row>
+</xml>
+
+
+  

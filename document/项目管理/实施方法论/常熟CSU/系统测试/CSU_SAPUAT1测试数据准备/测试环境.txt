@@ -1,0 +1,25 @@
+一：常熟UAT环境
+1.WCF地址： 
+	http://10.226.35.111/MESServiceUAT/BaseService.svc
+	
+2.数据库地址：
+	10.226.35.111  IMES3UAT  ibar_user/yfpoibar
+3.更新服务器地址：
+	10.226.35.111
+
+4.Report地址：
+	http://10.226.35.111:8080/
+
+
+二：安亭UAT环境
+1.WCF地址： 
+	http://10.250.16.85/MESServiceUAT/BaseService.svc
+	
+2.数据库地址：
+	10.250.16.88  IMES3UAT  ibar_user/yfpoibar
+3.更新服务器地址：
+	10.250.16.85
+
+4.Report地址：
+	http://10.250.16.85:8080/
+

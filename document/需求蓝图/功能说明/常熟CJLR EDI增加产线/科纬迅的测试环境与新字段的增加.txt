@@ -1,0 +1,40 @@
+﻿1.使用科纬迅的软件获取EDM与EDI报文
+2.拷贝到指定处理目录
+3.安装TomCat来处理XML文件
+4.排序信息解析进排序表中
+
+
+
+
+各位，供应商
+
+我们接到CJLR通知，将会对TLS进行增强，需要各位供应商确保：
+1.	能够接受新的TLS文件；
+2.	各位的JIS客户端可以解析并进行正确的排序处理；
+
+因此，我们计划与各位做相应的测试工作，具体时间计划为：
+•	10月18日进行SIT测试，
+•	10月23日进行UAT测试
+•	11月10日上线
+
+烦请各位确认是否能够满足项目要求时间，如有问题请及时反馈。
+
+鉴于本次测试涉及供应商较多，统一使用Httpsclient接收软件，不在单独建立新的测试通道。
+以下是各家的客户端，请下载。
+
+JNMP – ZZ:JNMPCJLR
+链接: https://pan.baidu.com/s/1hsiVuwW 密码: xsk3
+
+GA – ZZ:INTIERCJLR
+链接: https://pan.baidu.com/s/1pLsQyoj 密码: mdzu
+
+LEONI – ZZ:LEONICJLR
+链接: https://pan.baidu.com/s/1eScTO2Y 密码: ecde
+
+YFPO - -YFPOCJLR
+链接: https://pan.baidu.com/s/1c1EBtFM 密码: ghds
+
+
+
+
+服务器地址：10.226.35.110 

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/I.MES.Models.IF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/I.MES.Models.IF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:10133/BaseService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/I.MES.Models.IFModel" />
+  <xs:complexType name="ArrayOfWFMDirectPostTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WFMDirectPostTask" nillable="true" type="tns:WFMDirectPostTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWFMDirectPostTask" nillable="true" type="tns:ArrayOfWFMDirectPostTask" />
+  <xs:complexType name="WFMDirectPostTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryFactory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryStk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EffDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsReverse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Qty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StdOutType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFMDirectPostTask" nillable="true" type="tns:WFMDirectPostTask" />
+  <xs:complexType name="WebServiceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultInt" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebServiceResult" nillable="true" type="tns:WebServiceResult" />
+  <xs:complexType name="ArrayOfProductPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductPart" nillable="true" type="tns:ProductPart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductPart" nillable="true" type="tns:ArrayOfProductPart" />
+  <xs:complexType name="ProductPart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BackColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BriefDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompPartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompPartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="EffEndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ForceDisable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ForeColor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasBarcode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsPurchased" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelfMade" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LatestModifyMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LatestModifyTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LatestModifyUserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxBurnishTimes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProduceCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProduceLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleMode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductPart" nillable="true" type="tns:ProductPart" />
+  <xs:complexType name="ArrayOfProductBarcode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductBarcode" nillable="true" type="tns:ProductBarcode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductBarcode" nillable="true" type="tns:ArrayOfProductBarcode" />
+  <xs:complexType name="ProductBarcode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BarcodeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BurnishTimes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ColorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControlStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentPartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentPartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStk" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsIsolated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPrinted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LatestProdTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaintTimes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PrintTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Printer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkOrderNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductBarcode" nillable="true" type="tns:ProductBarcode" />
+  <xs:complexType name="ArrayOfProductHU">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductHU" nillable="true" type="tns:ProductHU" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductHU" nillable="true" type="tns:ArrayOfProductHU" />
+  <xs:complexType name="ProductHU">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EarliestProdTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUMaxQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HUQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsIsolated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsReceived" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSealed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LotNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POReceivedTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PackageStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProdLineCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProdPlaceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RackCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="StkCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WCCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductHU" nillable="true" type="tns:ProductHU" />
+  <xs:complexType name="PurchaseOrderReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="tns:ArrayOfReceiptStatusInterface" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderReq" nillable="true" type="tns:PurchaseOrderReq" />
+  <xs:complexType name="ArrayOfReceiptStatusInterface">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceiptStatusInterface" nillable="true" type="tns:ReceiptStatusInterface" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReceiptStatusInterface" nillable="true" type="tns:ArrayOfReceiptStatusInterface" />
+  <xs:complexType name="ReceiptStatusInterface">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsRead" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSyncSAP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsTransed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReadDT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReadResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReadResultNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiptDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiptQty" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SAPWriteDT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeriID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptStatusInterface" nillable="true" type="tns:ReceiptStatusInterface" />
+  <xs:complexType name="SalesAgreementReq">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/I.MES.Models.IFModel" minOccurs="0" name="ReqList" nillable="true" type="q1:ArrayOfPurchaseOrderSync" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalesAgreementReq" nillable="true" type="tns:SalesAgreementReq" />
+  <xs:complexType name="IFS_ProductBarcodeReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqList" nillable="true" type="tns:ArrayOfIFS_ProductBarcode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_ProductBarcodeReq" nillable="true" type="tns:IFS_ProductBarcodeReq" />
+  <xs:complexType name="ArrayOfIFS_ProductBarcode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IFS_ProductBarcode" nillable="true" type="tns:IFS_ProductBarcode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIFS_ProductBarcode" nillable="true" type="tns:ArrayOfIFS_ProductBarcode" />
+  <xs:complexType name="IFS_ProductBarcode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BarcodeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ControlStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentPartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentPartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsIsolated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsPrinted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LatestProdTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Printer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_ProductBarcode" nillable="true" type="tns:IFS_ProductBarcode" />
+  <xs:complexType name="IFS_HUPkgMstrReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqList" nillable="true" type="tns:ArrayOfIFS_HUPkgMstr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_HUPkgMstrReq" nillable="true" type="tns:IFS_HUPkgMstrReq" />
+  <xs:complexType name="ArrayOfIFS_HUPkgMstr">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IFS_HUPkgMstr" nillable="true" type="tns:IFS_HUPkgMstr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIFS_HUPkgMstr" nillable="true" type="tns:ArrayOfIFS_HUPkgMstr" />
+  <xs:complexType name="IFS_HUPkgMstr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EarliestProdTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUMaxQty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUQty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsIsolated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSealed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RackCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_HUPkgMstr" nillable="true" type="tns:IFS_HUPkgMstr" />
+  <xs:complexType name="IFS_HUPkgDetReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqList" nillable="true" type="tns:ArrayOfIFS_HUPkgDet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_HUPkgDetReq" nillable="true" type="tns:IFS_HUPkgDetReq" />
+  <xs:complexType name="ArrayOfIFS_HUPkgDet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IFS_HUPkgDet" nillable="true" type="tns:IFS_HUPkgDet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIFS_HUPkgDet" nillable="true" type="tns:ArrayOfIFS_HUPkgDet" />
+  <xs:complexType name="IFS_HUPkgDet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgMachine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgUserAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_HUPkgDet" nillable="true" type="tns:IFS_HUPkgDet" />
+  <xs:complexType name="IFS_RackReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqList" nillable="true" type="tns:ArrayOfIFS_Rack" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_RackReq" nillable="true" type="tns:IFS_RackReq" />
+  <xs:complexType name="ArrayOfIFS_Rack">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IFS_Rack" nillable="true" type="tns:IFS_Rack" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIFS_Rack" nillable="true" type="tns:ArrayOfIFS_Rack" />
+  <xs:complexType name="IFS_Rack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RackCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RackStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TSCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_Rack" nillable="true" type="tns:IFS_Rack" />
+  <xs:complexType name="IFS_PackageTypeReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqList" nillable="true" type="tns:ArrayOfIFS_PackageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_PackageTypeReq" nillable="true" type="tns:IFS_PackageTypeReq" />
+  <xs:complexType name="ArrayOfIFS_PackageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IFS_PackageType" nillable="true" type="tns:IFS_PackageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIFS_PackageType" nillable="true" type="tns:ArrayOfIFS_PackageType" />
+  <xs:complexType name="IFS_PackageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AverageDist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MixedPackage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MixedQty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigFactoryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PkgTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOrderNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFS_PackageType" nillable="true" type="tns:IFS_PackageType" />
+</xs:schema>

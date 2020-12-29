@@ -1,0 +1,6 @@
+--特殊库存管理状态
+SELECT * FROM SYS_StkManageStatus 
+--寄售转自有变为502K
+UPDATE SYS_GlobalMapConfig SET CfgValue ='502K' WHERE ConfigName='BizTypeMoveTypeMap' AND CfgKey='MngStatusConv'
+--自有转寄售变为501K
+UPDATE SYS_GlobalMapConfig SET CfgValue ='501K' WHERE ConfigName='BizTypeMoveTypeMap' AND CfgKey='MngStatusConvRev'

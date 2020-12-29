@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BaseService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:10133/BaseService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:10133/BaseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:10133/BaseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/I.MES.Models.IF" />
+      <xsd:import schemaLocation="http://localhost:10133/BaseService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/I.MES.Models.IFModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceBase_Send_InputMessage">
+    <wsdl:part name="parameters" element="tns:Send" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_Send_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SendBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendBytes" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SendBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_WFMDirectPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:WFMDirectPost" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_WFMDirectPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WFMDirectPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GetSupplierPrintPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierPrintPart" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GetSupplierPrintPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierPrintPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateProductBarcodeFromISV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductBarcodeFromISV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateProductBarcodeFromISV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductBarcodeFromISVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateProductHUFromISV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductHUFromISV" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateProductHUFromISV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateProductHUFromISVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GetProductHUByOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductHUByOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GetProductHUByOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductHUByOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateTP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_GenerateTP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_ClearTP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_ClearTP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_FunctionTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionTest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_FunctionTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_CloseOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_CloseOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncPurchaseOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPurchaseOrder" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncPurchaseOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPurchaseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncProductBarcodeToMES3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncProductBarcodeToMES3" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncProductBarcodeToMES3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncProductBarcodeToMES3Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncHUPkgMstrToMES3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncHUPkgMstrToMES3" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncHUPkgMstrToMES3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncHUPkgMstrToMES3Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncHUPkgDetToMES3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncHUPkgDetToMES3" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncHUPkgDetToMES3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncHUPkgDetToMES3Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncRackToMES3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncRackToMES3" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncRackToMES3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncRackToMES3Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncPackageTypeToMES3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPackageTypeToMES3" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SyncPackageTypeToMES3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncPackageTypeToMES3Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SaveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBase_SaveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceBase">
+    <wsdl:operation name="Send">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/Send" message="tns:IServiceBase_Send_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SendResponse" message="tns:IServiceBase_Send_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SendBytes" message="tns:IServiceBase_SendBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SendBytesResponse" message="tns:IServiceBase_SendBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WFMDirectPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/WFMDirectPost" message="tns:IServiceBase_WFMDirectPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/WFMDirectPostResponse" message="tns:IServiceBase_WFMDirectPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierPrintPart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/GetSupplierPrintPart" message="tns:IServiceBase_GetSupplierPrintPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/GetSupplierPrintPartResponse" message="tns:IServiceBase_GetSupplierPrintPart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductBarcodeFromISV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/GenerateProductBarcodeFromISV" message="tns:IServiceBase_GenerateProductBarcodeFromISV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/GenerateProductBarcodeFromISVResponse" message="tns:IServiceBase_GenerateProductBarcodeFromISV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductHUFromISV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/GenerateProductHUFromISV" message="tns:IServiceBase_GenerateProductHUFromISV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/GenerateProductHUFromISVResponse" message="tns:IServiceBase_GenerateProductHUFromISV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductHUByOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/GetProductHUByOrder" message="tns:IServiceBase_GetProductHUByOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/GetProductHUByOrderResponse" message="tns:IServiceBase_GetProductHUByOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/GenerateTP" message="tns:IServiceBase_GenerateTP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/GenerateTPResponse" message="tns:IServiceBase_GenerateTP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearTP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/ClearTP" message="tns:IServiceBase_ClearTP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/ClearTPResponse" message="tns:IServiceBase_ClearTP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunctionTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/FunctionTest" message="tns:IServiceBase_FunctionTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/FunctionTestResponse" message="tns:IServiceBase_FunctionTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/CloseOrder" message="tns:IServiceBase_CloseOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/CloseOrderResponse" message="tns:IServiceBase_CloseOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPurchaseOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncPurchaseOrder" message="tns:IServiceBase_SyncPurchaseOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncPurchaseOrderResponse" message="tns:IServiceBase_SyncPurchaseOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncProductBarcodeToMES3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncProductBarcodeToMES3" message="tns:IServiceBase_SyncProductBarcodeToMES3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncProductBarcodeToMES3Response" message="tns:IServiceBase_SyncProductBarcodeToMES3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncHUPkgMstrToMES3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncHUPkgMstrToMES3" message="tns:IServiceBase_SyncHUPkgMstrToMES3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncHUPkgMstrToMES3Response" message="tns:IServiceBase_SyncHUPkgMstrToMES3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncHUPkgDetToMES3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncHUPkgDetToMES3" message="tns:IServiceBase_SyncHUPkgDetToMES3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncHUPkgDetToMES3Response" message="tns:IServiceBase_SyncHUPkgDetToMES3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncRackToMES3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncRackToMES3" message="tns:IServiceBase_SyncRackToMES3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncRackToMES3Response" message="tns:IServiceBase_SyncRackToMES3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncPackageTypeToMES3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SyncPackageTypeToMES3" message="tns:IServiceBase_SyncPackageTypeToMES3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SyncPackageTypeToMES3Response" message="tns:IServiceBase_SyncPackageTypeToMES3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBase/SaveUser" message="tns:IServiceBase_SaveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBase/SaveUserResponse" message="tns:IServiceBase_SaveUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="endpointBasicHttp" type="tns:IServiceBase">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Send">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/Send" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBytes">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SendBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WFMDirectPost">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/WFMDirectPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierPrintPart">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/GetSupplierPrintPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductBarcodeFromISV">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/GenerateProductBarcodeFromISV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateProductHUFromISV">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/GenerateProductHUFromISV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductHUByOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/GetProductHUByOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTP">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/GenerateTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearTP">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/ClearTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunctionTest">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/FunctionTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/CloseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPurchaseOrder">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncPurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncProductBarcodeToMES3">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncProductBarcodeToMES3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncHUPkgMstrToMES3">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncHUPkgMstrToMES3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncHUPkgDetToMES3">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncHUPkgDetToMES3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncRackToMES3">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncRackToMES3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncPackageTypeToMES3">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SyncPackageTypeToMES3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceBase/SaveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BaseService">
+    <wsdl:port name="endpointBasicHttp" binding="tns:endpointBasicHttp">
+      <soap:address location="http://localhost:10133/BaseService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

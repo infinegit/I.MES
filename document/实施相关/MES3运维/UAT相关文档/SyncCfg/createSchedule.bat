@@ -1,0 +1,1 @@
+schtasks /Create  /TN YFPO.MES.AUTOSync /TR d:\SyncCfg\run.bat  /SC minute  /mo 15 /ru "System"

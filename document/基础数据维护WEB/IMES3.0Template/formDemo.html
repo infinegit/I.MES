@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <title>MES3.0-基础数据维护-系统登录</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="themes/default.css" />
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="themes/icon.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#loginSubmit").click(submitForm);
+            $("#resetForm").click(clearForm);
+        });
+        function submitForm() {
+            $('#ff').form('submit', {
+                onSubmit: function () {
+                    return $(this).form('enableValidation').form('validate');
+                }
+            });
+        }
+        function clearForm() {
+            $('#ff').form('clear');
+        }
+    </script>
+ </HEAD>
+<body>
+    <h2>表单样例</h2>
+    <p>这个一般作为列表界面的维护按钮点击弹出的window(模态)使用,弹出的window一般为模态,参考“列表查看与编辑"界面的新增按钮.</p>
+    <div style="margin:20px 0;"></div>
+ <div style="margin:20px 0;"></div>
+    <div class="easyui-panel" title="New Topic" style="width:400px">
+        <div style="padding:10px 60px 20px 60px">
+        <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+            <table cellpadding="5">
+                <tr>
+                    <td>Name:</td>
+                    <td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+                </tr>
+                <tr>
+                    <td>Subject:</td>
+                    <td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td><input class="easyui-textbox" name="message" data-options="multiline:true" style="height:60px"></input></td>
+                </tr>
+                <tr>
+                    <td>Language:</td>
+                    <td>
+                        <select class="easyui-combobox" name="language">
+                            <option value="th">Thai</option><option value="tr">Turkish</option>
+                            <option value="uk">Ukrainian</option><option value="vi">Vietnamese</option>                                  
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align:center;padding:5px">
+    
+    
+    
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" id="loginSubmit">确认</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-reload" id="resetForm">重填</a>
+        </div>
+        </div>
+    </div>
+
+</body>
+</HTML>

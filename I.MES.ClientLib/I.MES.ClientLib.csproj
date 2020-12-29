@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49F1C0AD-4B5A-486A-A6A9-7969CE6A74B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I.MES.Library</RootNamespace>
+    <AssemblyName>I.MES.ClientLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\extesion\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ComPanyOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceInterface\IProtocol.cs" />
+    <Compile Include="DeviceInterface\SerialDevice.cs" />
+    <Compile Include="FactoryOp.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Generator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalDicOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdRouteOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportData.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleManageOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleScanSitePrivOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleSupItemGroupOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoteConfigOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerInfo.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerTransaction.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
+    <Compile Include="UserOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoleOP.cs">
+      <DependentUpon>Generator.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\I.MES.ClientCore\I.MES.ClientCore.csproj">
+      <Project>{8990f98a-9c5c-479b-8101-5a2787e5f09e}</Project>
+      <Name>I.MES.ClientCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I.MES.GlobalCore\I.MES.GlobalCore.csproj">
+      <Project>{91123e74-b166-419e-a510-08bb90334504}</Project>
+      <Name>I.MES.GlobalCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I.MES.Models\I.MES.Models.csproj">
+      <Project>{7ff76d65-50f7-4b82-bb81-906e8f1e9f89}</Project>
+      <Name>I.MES.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I.MES.Tools\I.MES.Tools.csproj">
+      <Project>{32c3aa15-e04a-4cce-958c-9aa93ff446d4}</Project>
+      <Name>I.MES.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Generator.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <title>MES3.0-基础数据维护-列表与编辑Demo</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="themes/default.css" />
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="themes/icon.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+        //定义工具栏
+         var toolbar = [{
+            text:'新增',
+            iconCls:'icon-add',
+            handler:function(){
+                $('#win').window({
+                    width:800,
+                    height:600,
+                    modal:true,
+                    title:"新增数据"
+                });
+                $('#win').window('refresh', 'formDemo.html');
+                $('#win').window('open');  // open a window
+            }
+        },{
+            text:'修改',
+            iconCls:'icon-edit',
+            handler:function(){alert('modify')}
+        },'-',{
+            text:'删除',
+            iconCls:'icon-remove',
+            handler:function(){alert('delete')}
+        }];
+        
+        $(function () {
+ 
+        });
+
+    </script>
+ </HEAD>
+<body>
+    <!-- <h2>列表与编辑Demo</h2> -->
+    <!-- 这里是搜索条件 -->
+    <div id="p" class="easyui-panel" title="请输入查询条件" style="width:100%;height:100px;padding:0px;">
+        
+        Date From: <input class="easyui-datebox" style="width:110px">
+        To: <input class="easyui-datebox" style="width:110px">
+        Item ID: 
+        <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+            <option value="java">Java</option>
+            <option value="c">C</option>
+            <option value="basic">Basic</option>
+            <option value="perl">Perl</option>
+            <option value="python">Python</option>
+        </select>
+        
+        
+        Status: 
+        <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+            <option value="P">P</option>
+        </select>
+        <p>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search">查询</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-clear">清空</a>
+        </p>
+    </div>
+    
+    <div style="margin:20px 0;"></div>
+    <!-- 这里是扫描结果，使用datagrid呈现结果 -->
+    <table class="easyui-datagrid" title="列表与编辑Demo" style="width:100%;height:500px"
+            data-options="rownumbers:true,singleSelect:true,pagination:true,url:'datagrid_data.json',method:'get',toolbar:toolbar">
+        <thead>
+            <tr>
+                <th data-options="field:'itemid',width:80">Item ID</th>
+                <th data-options="field:'productid',width:100">Product</th>
+                <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+                <th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+                <th data-options="field:'attr1',width:240">Attribute</th>
+                <th data-options="field:'status',width:60,align:'center'">Status</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="win"></div>
+</body>
+</HTML>

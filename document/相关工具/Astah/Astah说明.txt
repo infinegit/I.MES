@@ -1,0 +1,11 @@
+astah-professional-7_0_0-846701-jre-setup.exe 32位安装包
+
+astah-professional-7_0_0-846701-jre-64bit-setup.exe 64位安装包
+
+astah-pro.jar 破解包，拷贝到安装目录下覆盖原有文件
+
+sqljdbc_4.2目录下的文件为Sql Server的JDBC驱动，默认使用：sqljdbc42.jar
+
+
+
+

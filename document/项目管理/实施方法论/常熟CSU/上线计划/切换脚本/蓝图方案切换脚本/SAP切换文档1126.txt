@@ -1,0 +1,100 @@
+1.清空业务表(只有在UAT阶段清空)
+关闭同步QADD的monitor，及所有事务处理掉，关掉接QAD的主数据接口
+
+
+2.清空SAP主数据表  PM不清 （发布启用syncdatemonitor）
+--3.MES3里面的SYS_SapIFCfg要切换成正式库的连接（等SAP开闸再开启用）
+
+4.SAPIF库里面全部要修改成启用状态
+SELECT * FROM dbo.InterfaceRelation
+SELECT * FROM dbo.RelationSort
+  --4.1--启用所有的
+UPDATE dbo.RelationSort SET IsActive = 1
+UPDATE dbo.InterfaceRelation SET IsActive = 1 
+
+  --4.2--关掉MESTOISV的接口
+UPDATE dbo.RelationSort SET IsActive = 0 WHERE  GroupName = 'MES_TO_ISV'
+UPDATE dbo.InterfaceRelation SET IsActive = 0 WHERE GroupName = 'MES_TO_ISV'
+
+
+5.采购订单下达权限拉掉（Report）--sql
+--正常的SQL
+update [RPT_UserRolePriv] set menuid = menuid + 'X' where menuid in (select MenuID from [dbo].[RPT_Menu] where url = '/PurchaseOrder')
+--特殊的SQL
+update [RPT_Menu] set parentid = '999999' where url = '/PurchaseOrder'
+
+6.销售订单组权限拉掉（Report）--sql
+--正常的SQL
+update [RPT_UserRolePriv] set menuid = menuid + 'X' where menuid in (select MenuID from [dbo].[RPT_Menu] where url = '/SalesAgreement')
+--特殊的SQL
+update [RPT_Menu] set parentid = '999999' where url = '/SalesAgreement'
+
+7.MEA上线时结存库存发给SAP(按要求格式）
+《标准单位修改问题（需要老吴提供sql）烟台没有》
+select a.partno,a.FactoryCode,'','',a.stkcode,a.NonRtctNormal,b.unit from wms_stkdet a,mfg_partdetail b with (nolock) where a.PartNo = b.PartNo
+and a.NonRtctNormal <> 0 AND a.FactoryCode = b.FactoryCode 
+
+8.切换要把MES里面的所有订单关掉（这个要提前和ERP确认）SAP重新下订单
+8.1先导出未结订单给ERP并且给ISV通知关闭未结订单
+
+SELECT * FROM dbo.LGS_PurchaseOrder WHERE ItemStatus = ''
+
+8.2后关闭
+UPDATE LGS_PurchaseOrder SET ItemStatus = 'D' WHERE ItemStatus = ''
+
+
+
+9.和邢晓君要维修备件库存盘盈导入（维修备件不能传给SAP）
+
+10.同步过QAD的全部标记掉isGather标记成1（开帐日之前），QAD的两个Mointort停掉（汇总的临时关）
+ 
+
+
+UPDATE dbo.SYS_SAPTransaction SET IsGather = '1' WHERE AccountingDate < '2016-12-01'
+
+
+11.sys_globelconfig、sys_globeldic中将老的成本中心、科目改成新的（邱姐姐给）（科目和浦东安亭一样）
+UPDATE dbo.SYS_GlobalConfig SET ParamValue = '11106001' WHERE ConfigName = 'ConstCenter'
+UPDATE SYS_GlobalDic SET CodeValue = '11106001' WHERE CodeName IN ('ScrapCostCenter','DismantScrapCostCenter','DismantDefectCostCenter')
+UPDATE SYS_GlobalConfig SET ParamValue = '64010900000' WHERE ConfigName = 'Account'
+UPDATE SYS_GlobalDic SET CodeValue = '64010900000' WHERE CodeName = 'AccountSubject' 
+
+12.BTO同步JISPointinfoMointort程序要关掉，并且修改成80104
+
+13.执行（SAPUAT上线烟台切换模板）切换文档
+
+14.脱钩盖板配置更改及DDQ盖板条码变更
+
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904731' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11905933' WHERE CurrentPartNo = '11904731' AND CurrentPartVersion = 'DDQ'
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904650' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11905936' WHERE CurrentPartNo = '11904650' AND CurrentPartVersion = 'DDQ'
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904627' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11905934' WHERE CurrentPartNo = '11904627' AND CurrentPartVersion = 'DDQ'
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904530' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11905935' WHERE CurrentPartNo = '11904530' AND CurrentPartVersion = 'DDQ'
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904012' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11904230' WHERE CurrentPartNo = '11904012' AND CurrentPartVersion = 'DDQ'
+SELECT * FROM dbo.MFG_ProductBarcode WHERE CurrentPartNo = '11904074' AND CurrentPartVersion = 'DDQ'
+UPDATE MFG_ProductBarcode SET CurrentPartNo = '11904231' WHERE CurrentPartNo = '11904074' AND CurrentPartVersion = 'DDQ'
+
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904731' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11905933' WHERE PartNo = '11904731' AND PartVersion = 'DDQ'
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904650' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11905936' WHERE PartNo = '11904650' AND PartVersion = 'DDQ'
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904627' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11905934' WHERE PartNo = '11904627' AND PartVersion = 'DDQ'
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904530' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11905935' WHERE PartNo = '11904530' AND PartVersion = 'DDQ'
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904012' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11904230' WHERE PartNo = '11904012' AND PartVersion = 'DDQ'
+SELECT * FROM dbo.LGS_HUPkgMstr WHERE PartNo = '11904074' AND PartVersion = 'DDQ'
+UPDATE LGS_HUPkgMstr SET PartNo = '11904231'  WHERE PartNo = '11904074' AND PartVersion = 'DDQ'
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MFG_PartDetail 表结构不对
+
+
+
+
+

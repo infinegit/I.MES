@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f66395d5eb54fb0badf3f3246466bb3" Name="关系图1" ZoomLevel="98">
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BarcodeBindDet" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BarcodeControlStatus" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BarcodePrintLog" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BarcodeScanLog" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BOM" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_BOM_Disassembled" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_PartCategory" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_PartDetail" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProcRoute" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProdLine" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProduceCategory" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProduceLevel" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProductBarcode" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProductColor" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProdWorkSetp" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_VehicleMode" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_WorkSchedule" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_Company" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_Factory" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_GlobalConfig" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_GlobalDic" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_MachinePrinterPriv" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_Printer" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_Prog" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_ProgPriv" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_Role" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_RoleProgPriv" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_RPTMenu" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_SerialNum" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_User" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_UserRole" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="I.MES.Library.V_SYS_TABLE_STRUCT" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <AssociationConnector Association="I.MES.Library.FK_SYS_RoleProgPriv_SYS_ProgPriv" ManuallyRouted="false" />
+        <AssociationConnector Association="I.MES.Library.FK_TRoleProgPriv_TRole" ManuallyRouted="false" />
+        <AssociationConnector Association="I.MES.Library.FK_TUserRole_TRole" ManuallyRouted="false" />
+        <AssociationConnector Association="I.MES.Library.FK_TUserRole_TUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="I.MES.Library.SYS_UserFactoryPriv" Width="1.5" PointX="4.2757592258396366" PointY="8.2387744077661882" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProdStation" Width="1.5" PointX="4.7548279803035918" PointY="2.5556040865162406" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_RouteStation" Width="1.5" PointX="11.309388521737134" PointY="5.4530288155437585" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ScanPlugin" Width="1.5" PointX="8.5649188126274" PointY="8.82375443392608" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ScanPluginParam" Width="1.5" PointX="2.3995719619093334" PointY="2.4346424203527359" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_RoteConfig" Width="1.5" PointX="9.8307626535327941" PointY="0.42708481868127585" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_Part" Width="1.5" PointX="11.489513687551726" PointY="6.0273584602528061" />
+        <EntityTypeShape EntityType="I.MES.Library.PP_BarCodeTrack" Width="1.5" PointX="3.4988576245954528" PointY="11.848672514710888" />
+        <EntityTypeShape EntityType="I.MES.Library.PP_ThightRecord" Width="1.5" PointX="6.6371573631824727" PointY="2.3399395357537731" />
+        <EntityTypeShape EntityType="I.MES.Library.sysdiagrams" Width="1.5" PointX="10.024404867563584" PointY="18.26069601730476" />
+        <EntityTypeShape EntityType="I.MES.Library.V_MFG_SelectRoteConfig" Width="1.5" PointX="10.851395246969254" PointY="16.285740681125663" />
+        <EntityTypeShape EntityType="I.MES.Library.V_WorkStepParam" Width="1.5" PointX="11.396691659184494" PointY="5.4741930391053639" />
+        <EntityTypeShape EntityType="I.MES.Library.MFG_ProdWorkStepParam" Width="1.5" PointX="0.23832468140792318" PointY="22.7067984001277" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

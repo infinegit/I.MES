@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85A462C7-B0EE-4D34-8B27-CF4715E1C4A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>I.MES.Library</RootNamespace>
+    <AssemblyName>I.MES.ServerLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\I.MES.ServerLib.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\extesion\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DALC4NET">
+      <HintPath>..\extesion\DALC4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\extesion\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\extesion\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\extesion\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeOP.cs" />
+    <Compile Include="BaseOP.cs" />
+    <Compile Include="ComPanyOP.cs" />
+    <Compile Include="FactoryOp.cs" />
+    <Compile Include="GlobalDicOP.cs" />
+    <Compile Include="PartOP.cs" />
+    <Compile Include="ProdRouteOP.cs" />
+    <Compile Include="ProductOP.cs" />
+    <Compile Include="RoleManageOP.cs" />
+    <Compile Include="RoleScanSitePrivOP.cs" />
+    <Compile Include="RoleSupItemGroupOP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoteConfigOP.cs" />
+    <Compile Include="RPT\ReportOP.cs" />
+    <Compile Include="ServerInfo.cs" />
+    <Compile Include="ServerTransaction.cs" />
+    <Compile Include="UserOP.cs" />
+    <Compile Include="UserRoleOP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\I.MES.Models\I.MES.Models.csproj">
+      <Project>{7ff76d65-50f7-4b82-bb81-906e8f1e9f89}</Project>
+      <Name>I.MES.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I.MES.ServerEF\I.MES.ServerEF.csproj">
+      <Project>{24a31d7b-c59a-4fa8-b86d-ce491dce0e26}</Project>
+      <Name>I.MES.ServerEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\I.MES.Tools\I.MES.Tools.csproj">
+      <Project>{32C3AA15-E04A-4CCE-958C-9AA93FF446D4}</Project>
+      <Name>I.MES.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.BarcodePrintReq.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.ClosedWFMMaterialReqBill.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.IFS_GRC_ReturnObject.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.IFS_GRC_UserRole.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.ProductBarcode.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.ProductHU.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.ProductPart.datasource" />
+    <None Include="Properties\DataSources\YFPO.MES.Models.IF.WebServiceResult.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\zh-Hans\" />
+    <Folder Include="EDI\" />
+    <Folder Include="IF\" />
+    <Folder Include="PLG\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

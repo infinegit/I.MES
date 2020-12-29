@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <title>MES3.0-基础数据维护-系统登录</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="themes/default.css" />
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="themes/icon.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#loginSubmit").click(submitForm);
+            $("#resetForm").click(clearForm);
+        });
+        function submitForm() {
+            $('#ff').form('submit', {
+                onSubmit: function () {
+                    return $(this).form('enableValidation').form('validate');
+                }
+            });
+        }
+        function clearForm() {
+            $('#ff').form('clear');
+        }
+    </script>
+ </HEAD>
+<body>
+    <h2>系统登录</h2>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-panel" title="请输入用户名和密码" style="width:400px">
+        <div style="padding:10px 60px 20px 60px">
+        <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+            <table cellpadding="5">
+                <tr>
+                    <td>用户名:</td>
+                    <td><input class="easyui-textbox" type="text" name="userAccount" data-options="required:true"  style="width:180px;"/></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input class="easyui-textbox" type="password" name="userPassword" data-options="required:true" style="width:180px;" /></td>
+                </tr>
+                <tr>
+                    <td>公司:</td>
+                    <td>
+                        <select class="easyui-combobox" name="factory"  style="width:180px;">
+                            <option value="PD">浦东</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>工厂:</td>
+                    <td>
+                        <select class="easyui-combobox" name="region"  style="width:180px;">
+                            <option value="hq">合庆</option>
+                            <option value="lg">临港</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align:center;padding:5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" id="loginSubmit">登录</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" id="resetForm">重填</a>
+        </div>
+        </div>
+    </div>
+
+</body>
+</HTML>
